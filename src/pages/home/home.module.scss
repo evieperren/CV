@@ -1,0 +1,44 @@
+.container {
+  background-color: lightblue;
+  height: 100%;
+
+  h1 {
+    font-size: 55px; 
+    text-align: center;
+    position: relative;
+
+
+    @media only screen and (min-width: 760px) {
+      font-size: 140px; 
+      
+    }
+    @media only screen and (min-width: 1000px) {
+      font-size: 180px; 
+      text-align: left;
+      line-height: 11rem;
+      margin-top: 50px;
+    }
+  }
+}
+.float {
+  &__left {
+    display: block;
+
+  }
+  &__right {
+    display: block;
+  }
+  @media screen and (min-width: 1000px){
+    &__left {
+      padding-left: 150px;
+  
+    }
+    &__right {
+      padding-right: 150px;
+      position: absolute;
+      right: 0
+
+    }
+  }
+
+}

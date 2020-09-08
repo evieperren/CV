@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Menu from '../../components/menu/menu'
 
 const ContactPage = () => {
   return (
-    <h1>Contact page</h1>
+    <Fragment>
+       <header>
+          <Menu></Menu>
+        </header>
+        <h1>Contact page</h1>
+    </Fragment>
   )
 }
 export default ContactPage

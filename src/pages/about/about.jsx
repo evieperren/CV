@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Menu from '../../components/menu/menu'
 
 const AboutPage = () => {
   return (
-    <p>About me</p>
+    <Fragment>
+       <header>
+          <Menu></Menu>
+        </header>
+        <p>About me</p>
+    </Fragment>
   )
 }
 export default AboutPage

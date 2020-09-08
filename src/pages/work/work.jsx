@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Menu from '../../components/menu/menu'
 
 const WorkPage = () => {
   return (
-    <h1>Work Page</h1>
+    <Fragment>
+      <header>
+        <Menu></Menu>
+      </header>
+      <h1>Work Page</h1>
+    </Fragment>
   )
 }
 export default WorkPage
