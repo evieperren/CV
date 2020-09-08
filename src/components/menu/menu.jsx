@@ -18,10 +18,10 @@ const Menu = () => {
         <Fragment>
         <nav className={styles.menu}>
          <button className={cx(styles.button, styles.button__close)} onClick={handleMenuClick} aria-label="close menu">X</button>
-          <li onClick={handleMenuClick}><Link to="/">Home</Link></li>
-          <li onClick={handleMenuClick}><Link to="/about">About</Link></li>
-          <li onClick={handleMenuClick}><Link to="/work">Work</Link></li>
-          <li onClick={handleMenuClick}><Link to="/contact">Contact</Link></li>
+          <li onClick={handleMenuClick}><Link to="/" className={styles.hover__blue}>Home</Link></li>
+          <li onClick={handleMenuClick}><Link to="/about" className={styles.hover__amber}>About</Link></li>
+          <li onClick={handleMenuClick}><Link to="/work" className={styles.hover__purple}>Work</Link></li>
+          <li onClick={handleMenuClick}><Link to="/contact" className={styles.hover__light_blue}>Contact</Link></li>
         </nav>
         </Fragment>
       )}

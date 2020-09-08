@@ -11,12 +11,31 @@
     list-style: none;
     text-align: center;
     padding: 10px;
-    
+
     a {
       color: #000;
       font-size: 80px;
       text-decoration: none;
       font-family: 'Abril Fatface', cursive;
+      &:hover {
+        border-radius: 50%;
+        border: 1px solid black;
+
+        &.hover {
+          &__blue {
+            color: #1A4464;
+          }
+          &__amber {
+            color: #C69A8F;
+          }
+          &__purple {
+            color: #88636A;
+          }
+          &__light_blue {
+            color: #729CBF;
+          }
+        }
+      }
     }
   }
 }
@@ -36,7 +55,7 @@
 
   &__close {
     color: #000;
-    font-size: 100px;
+    font-size: 50px;
   }
   &:hover{
     cursor: grab;
