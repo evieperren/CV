@@ -1,6 +1,21 @@
+@import '../../features/mixins.scss';
+
 .container {
-  background-color: lightblue;
+  @include background-colour-animation;
   height: 100%;
+
+  header {
+
+    display: flex;
+    justify-content: space-between;
+
+    & a.non_menu_link {
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      padding: 10px;
+    }
+  }
 
   h1 {
     font-size: 55px; 

@@ -1,0 +1,7 @@
+@import './animations.scss';
+
+@mixin background-colour-animation {
+  animation-name: background-colour-transition;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}

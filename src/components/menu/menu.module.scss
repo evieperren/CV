@@ -1,7 +1,7 @@
 .menu {
-  background-color: rgb(38, 38, 38);
   position: absolute;
   width: 100%;
+  background-color: red;
   height: 100%;
   top: 0;
   z-index: 100;
@@ -16,5 +16,23 @@
       font-size: 35px;
       text-decoration: none;
     }
+  }
+}
+.button {
+  background-color: transparent;
+  border: none;
+  height: 3rem;
+  padding: 20px;
+  font-size: 20px;
+  outline: none;
+
+  & .vertical{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+
+  }
+
+  &__close {
+    color: white
   }
 }

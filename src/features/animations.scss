@@ -1,0 +1,25 @@
+@keyframes background-colour-transition{
+  0% {
+    background-color: orange;
+  }
+  10% {
+    background-color: rgb(245, 235, 145);
+
+  }
+  20% {
+   background-color: lightcoral;
+  }
+  30% {
+    background-color: rgb(194, 65, 87);
+  }
+  40% {
+    background-color: rgb(194, 65, 87);
+  }
+  50% {
+   background-color: red;
+  }
+  100% {
+   background-color: orange;
+    
+  }
+ }
