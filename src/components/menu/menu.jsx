@@ -1,7 +1,7 @@
 import React, { Fragment, useContext  } from 'react'
 import { Link } from "react-router-dom"
 import { MenuContext } from '../../context/menu-context'
-
+import styles from './menu.module.scss'
 const Menu = () => {
   const {isMenuOpen, setIsMenuOpen } = useContext(MenuContext)
 
@@ -11,14 +11,17 @@ const Menu = () => {
   
   return (
     <Fragment>
-      <button onClick={handleMenuClick}>Menu</button>
+      <button onClick={handleMenuClick}aria-label="open menu">Menu</button>
       { isMenuOpen && (
-        <nav>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/work">Work</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+        <Fragment>
+        <nav className={styles.menu}>
+         <button onClick={handleMenuClick} aria-label="close menu">X</button>
+          <li onClick={handleMenuClick}><Link to="/">Home</Link></li>
+          <li onClick={handleMenuClick}><Link to="/about">About</Link></li>
+          <li onClick={handleMenuClick}><Link to="/work">Work</Link></li>
+          <li onClick={handleMenuClick}><Link to="/contact">Contact</Link></li>
         </nav>
+        </Fragment>
       )}
     </Fragment>
   )
