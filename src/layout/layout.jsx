@@ -1,28 +1,32 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from '../pages/about/about'
 import HomePage from '../pages/home/home';
 import ContactPage from '../pages/contact/contact';
 import WorkPage from '../pages/work/work';
+import { MenuContext } from '../context/menu-context';
 
 const Layout = () => {
+  const [ isMenuOpen, setIsMenuOpen ] = useState(false)
   return(
     <Fragment>
     <Router>
       <main>
           <Switch>
-            <Route exact path="/">
-              <HomePage></HomePage>
-            </Route>
-            <Route path="/about">
-              <AboutPage></AboutPage>
-            </Route>
-            <Route path="/contact">
-              <ContactPage></ContactPage>
-            </Route>
-            <Route path="/work">
-              <WorkPage></WorkPage>
-            </Route>
+            <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
+              <Route exact path="/">
+                <HomePage></HomePage>
+              </Route>
+              <Route path="/about">
+                <AboutPage></AboutPage>
+              </Route>
+              <Route path="/contact">
+                <ContactPage></ContactPage>
+              </Route>
+              <Route path="/work">
+                <WorkPage></WorkPage>
+              </Route>
+            </MenuContext.Provider>
           </Switch>
       </main>
       <footer></footer>
