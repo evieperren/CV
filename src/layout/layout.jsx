@@ -1,25 +1,31 @@
 import React, { Fragment } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from '../pages/about/about'
 import HomePage from '../pages/home/home';
+import Menu from '../components/menu/menu'
+import ContactPage from '../pages/contact/contact';
+import WorkPage from '../pages/work/work';
 
 const Layout = () => {
   return(
     <Fragment>
     <Router>
       <header>
-        <nav>
-          <li><Link to="/about">About </Link></li>
-          <li><Link to="/home">Home </Link></li>
-        </nav>
+        <Menu></Menu>
       </header>
       <main>
           <Switch>
+            <Route exact path="/">
+              <HomePage></HomePage>
+            </Route>
             <Route path="/about">
               <AboutPage></AboutPage>
             </Route>
-            <Route path="/home">
-              <HomePage></HomePage>
+            <Route path="/contact">
+              <ContactPage></ContactPage>
+            </Route>
+            <Route path="/work">
+              <WorkPage></WorkPage>
             </Route>
           </Switch>
       </main>
