@@ -1,7 +1,8 @@
 .menu {
   position: absolute;
   width: 100%;
-  background-color: red;
+  background-color: #F1F1F1;
+  opacity: 0.95;
   height: 100%;
   top: 0;
   z-index: 100;
@@ -9,12 +10,13 @@
   li {
     list-style: none;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     
     a {
-      color: white;
-      font-size: 35px;
+      color: #000;
+      font-size: 80px;
       text-decoration: none;
+      font-family: 'Abril Fatface', cursive;
     }
   }
 }
@@ -33,6 +35,10 @@
   }
 
   &__close {
-    color: white
+    color: #000;
+    font-size: 100px;
+  }
+  &:hover{
+    cursor: grab;
   }
 }
