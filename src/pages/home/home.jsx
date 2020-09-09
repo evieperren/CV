@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link'
 import Menu from '../../components/menu/menu'
 import styles from './home.module.scss'
 import sky from '../../assets/images/sky.jpg'
@@ -19,7 +20,7 @@ const HomePage = () => {
       <div className={styles.container}>
         <header>
           <Menu></Menu>
-          <Link to="/work" className={styles.non_menu_link}>Work</Link>
+          <Link smooth to="#work" className={styles.non_menu_link}>Work</Link>
         </header>
         {showFeatureImg && (
           <Fragment>
@@ -47,15 +48,8 @@ const HomePage = () => {
           </Fragment>
         )}
 
-
-
-
-
-
-
-
-        <div className={styles.filler_container}>
-          <p>This should be a filler white space</p>
+        <div className={styles.filler_container} id="work">
+          <p>This should be a filler white space for work here </p>
         </div>
 
       </div>

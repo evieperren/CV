@@ -23,9 +23,6 @@ const Layout = () => {
               <Route path="/contact">
                 <ContactPage></ContactPage>
               </Route>
-              <Route path="/work">
-                <WorkPage></WorkPage>
-              </Route>
             </MenuContext.Provider>
           </Switch>
       </main>
