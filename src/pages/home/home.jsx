@@ -61,13 +61,22 @@ const HomePage = () => {
         <div id="work">
           <h2>Works</h2>
           <h3 className={styles.work__number}>0{workNumber}</h3>
-          <div className={styles.work__container}>
-            <img src={hr_project_laptop} alt="HR mentor project" className={styles.work__img1}/>
-            <p className={styles.feature__right}></p>
-          </div>
-          <div className={styles.work__container}>
-            <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
-          </div>
+          <ul className={styles.work__list}>
+            <li className={styles.work__list_item}>
+              <img src={hr_project_laptop} alt="HR mentor project" className={styles.work__img1}/>
+              {/* <p className={styles.feature__right}></p> */}
+            </li>
+            <li className={styles.work__list_item}>
+              <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
+            </li>
+            <li className={styles.work__list_item}>
+              <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
+            </li>
+            <li className={styles.work__list_item}>
+              <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
+            </li>
+          </ul>
+          <p>arrow to hint to scroll?</p>
         </div>
     </div>
   )

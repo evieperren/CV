@@ -131,8 +131,20 @@
   }
 }
 .work {
-  &__container{
+  &__list {
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    padding-bottom: 0;
+    overflow-x: scroll;
+  }
+  &__list_item{
     position: relative;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
   }
   &__number {
     font-size: 130px;
@@ -158,5 +170,6 @@
     display: block;
     padding-bottom: 40px;
     z-index: 1;
+
   }
 }
