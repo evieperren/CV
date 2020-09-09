@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react'
-// import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link'
 import Menu from '../../components/menu/menu'
 import styles from './home.module.scss'
@@ -17,6 +16,7 @@ const HomePage = () => {
 
   }
   return(
+    <Fragment>
       <div className={styles.container}>
         <header>
           <Menu></Menu>
@@ -48,11 +48,11 @@ const HomePage = () => {
           </Fragment>
         )}
 
-        <div className={styles.filler_container} id="work">
+      </div>
+        <div id="work">
           <p>This should be a filler white space for work here </p>
         </div>
-
-      </div>
+    </Fragment>
   )
 }
 export default HomePage
