@@ -58,13 +58,16 @@ const HomePage = () => {
           </Fragment>
         )}
       </div>
-        <div id="work">
+      <div className={styles.introduction}>
+        <p>A self teaching software developer born and raised in England. With a focus on Front-end development, Evie is able to work individually and in a team to create a strong UI/UX written in clean code.
+        <br/> With 2 years of experience, Evie has a passion for creating a product that exceeds the clients requirements with focus on accessibility.</p>
+      </div>
+        <div id="work" className={styles.work}>
           <h2>Works</h2>
           <h3 className={styles.work__number}>0{workNumber}</h3>
           <ul className={styles.work__list}>
             <li className={styles.work__list_item}>
               <img src={hr_project_laptop} alt="HR mentor project" className={styles.work__img1}/>
-              {/* <p className={styles.feature__right}></p> */}
             </li>
             <li className={styles.work__list_item}>
               <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>

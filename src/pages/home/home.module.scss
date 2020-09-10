@@ -17,7 +17,6 @@
 
     @media only screen and (min-width: 1000px) {
       align-items: center;
-
     }
     & a.non_menu_link {
       color: #000;
@@ -40,7 +39,6 @@
 
     @media only screen and (min-width: 760px) {
       font-size: 140px; 
-      
     }
     @media only screen and (min-width: 1000px) {
       font-size: 240px; 
@@ -130,7 +128,25 @@
 
   }
 }
+.introduction {
+  padding: 10px 20px;
+  @media only screen and (min-width: 1000px) {
+    width: 60%;
+    float: right;
+
+  }
+  
+}
+
+
 .work {
+  & h2 {
+    margin: 10px;
+    @media only screen and (min-width: 1000px) {
+      clear: both;
+
+    }
+  }
   &__list {
 
     display: flex;
