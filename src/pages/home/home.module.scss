@@ -260,4 +260,9 @@
   background: no-repeat;
   background-position: center;
   background-image: url('../../assets/images/angle-double-down-solid.svg');
+
+  @media only screen and (min-width: 1000px) {
+  background-image: url('../../assets/images/angle-double-right-solid.svg');
+
+  }
 }
