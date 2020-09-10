@@ -104,20 +104,20 @@
     position: absolute;
     right: 22px;
     top: 135px;
-  }
-  &__bottom {
-    display:none;
-  }
-  &__reference {
-    display: none;
-  }
-  @media only screen and (min-width: 1000px) {
-    &__top {
-      width: 260px;
+
+    @media only screen and (min-width: 760px) {
+      width: 266px;
+      right: 184px;
+      top: 117px;
+    }
+    @media only screen and (min-width: 1000px) {
       right: 382px;
       top: 40px;
     }
-    &__bottom {
+  }
+  &__bottom {
+    display:none;
+    @media only screen and (min-width: 1000px) {
       width: 260px;
       position: absolute;
       bottom: -125px;
@@ -125,15 +125,20 @@
       left: 200px;
       display: block;
     }
-
+  }
+  &__reference {
+    display: none;
   }
 }
 .introduction {
   padding: 10px 20px;
+  @media only screen and (min-width: 760px) {
+    padding: 50px 20px;
+  }
   @media only screen and (min-width: 1000px) {
-    width: 60%;
+    width: 50%;
+    padding: 10px 20px;
     float: right;
-
   }
   
 }
@@ -144,48 +149,115 @@
     margin: 10px;
     @media only screen and (min-width: 1000px) {
       clear: both;
-
     }
   }
   &__list {
+    margin: 0;
+    padding: 0;
 
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    padding-bottom: 0;
-    overflow-x: scroll;
+    @media only screen and (min-width: 1000px) {
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      padding-bottom: 0;
+      overflow-x: scroll;
+    }
+
   }
-  &__list_item{
+  &__list_item {
     position: relative;
     list-style: none;
     display: inline-block;
     width: 100%;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      p {
+        text-align: center;
+      }
+    }
+    @media only screen and (min-width: 1000px) {
+      width: 100%;
+    }
   }
   &__number {
-    font-size: 130px;
-    padding-right: 130px;
-    display: inline-block;
-    z-index: 5;
+    font-size: 60px;
     position: sticky;
-    top: 0;
+    z-index: 5;
+    top: 50px;
     display: flex;
     justify-content: flex-end;
     margin: 0;
+    padding-right: 30px;
+    color: #3C77A4;
+    font-family: 'Abril Fatface', cursive;
+    line-height: 3rem;
+
+    @media only screen and (min-width: 1000px) {
+      font-size: 130px;
+      padding-right: 130px;
+    }
   }
   &__img1 {
+    width: 80%;
+    opacity: 0.7;
     margin: 0 auto;
-    width: 700px;
     display: block;
-    padding-bottom: 40px;
     z-index: 1;
+    padding-bottom: 40px;
+    &:hover{
+      opacity: 1;
+    }
+    @media only screen and (min-width: 760px) {
+      max-width: 450px;
+    }
+    @media only screen and (min-width: 1000px) {
+      max-width: 700px;
+    }
   }
   &__img2 {
+    width: 70%;
+    opacity: 0.7;
     margin: 0 auto;
-    width: 500px;
+    display: block;
+    z-index: 1;
+    padding-bottom: 40px;
+    &:hover{
+      opacity: 1;
+    }
+    @media only screen and (min-width: 760px) {
+      max-width: 350px;
+    }
+    
+    @media only screen and (min-width: 1000px) {
+      max-width: 500px;
+    }
+  }
+  &__img3 {
+    width: 60%;
+    margin: 0 auto;
     display: block;
     padding-bottom: 40px;
-    z-index: 1;
-
+    opacity: 0.7;
+    &:hover{
+      opacity: 1;
+    }
+    @media only screen and (min-width: 760px) {
+      max-width: 270px;
+    }
+    @media only screen and (min-width: 1000px) {
+      width: 500px;
+    }
   }
+}
+.scroll {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  display: block;
+  background: no-repeat;
+  background-position: center;
+  background-image: url('../../assets/images/angle-double-down-solid.svg');
 }
