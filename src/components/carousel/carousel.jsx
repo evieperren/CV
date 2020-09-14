@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import styles from './carousel.module.scss'
 import hr_project_laptop from '../../assets/images/hr-desktop.png'
 import self_serve_tablet from '../../assets/images/self-serve.png'
@@ -12,22 +12,22 @@ const Carousel = () => {
     {
       title: 'HR Mentor Project',
       image: hr_project_laptop,
-      class: styles.work__img1,
+      class: styles.laptop,
     },
     {
       title: 'Pet Checkout',
       image: pet_checkout_mobile,
-      class: styles.work__img1
-    },
-    {
-      title: 'Self Service Portal Redesign',
-      image: self_serve_tablet,
-      class: styles.work__img1
+      class: styles.mobile
     },
     {
       title: 'Link Generator',
       image: pet_link_laptop,
-      class: styles.work__img2
+      class: styles.laptop
+    },
+    {
+      title: 'Self Service Portal Redesign',
+      image: self_serve_tablet,
+      class: styles.tablet
     }
   ]
   function goToPreviousSlide(){
@@ -55,22 +55,25 @@ const Carousel = () => {
   }
   console.log(`active index: ${activeIndex}`)
   return (
-    <div className={styles.container}>
-      <span className={styles.scroll_left} aria-label="scroll left" onClick={goToPreviousSlide}></span>
+    <Fragment>
+      <h3 className={styles.number}>0{activeIndex + 1}</h3>
+      <div className={styles.container}>
+        <span className={styles.scroll_left} aria-label="scroll left" onClick={goToPreviousSlide}></span>
         <ul className={styles.slider}>
           {slides.map((item, key) => 
-            { return (
+            {return (
               <li key={key} className={checkActiveIndex(key) ? styles.active : styles.not_active }>
                 <a href="/" className={styles.item}>
+                  <img src={item.image} alt={item.title} className={item.class}/>
                   <p>{item.title}</p> 
-                  <img src={item.image} alt={item.title} className={styles.work__img1}/>
                 </a>
               </li>
             )
           })}
-        </ul>
-      <span className={styles.scroll_right} aria-label="scroll right" onClick={goToNextSlide}></span>
-    </div>
+          </ul>
+          <span className={styles.scroll_right} aria-label="scroll right" onClick={goToNextSlide}></span>
+      </div>
+    </Fragment>
   )
 }
 export default Carousel

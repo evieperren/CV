@@ -22,7 +22,6 @@ const Menu = () => {
          <button className={cx(styles.button, styles.button__close)} onClick={handleMenuClick} aria-label="close menu"><img className={styles.icon} src={close} alt="close menu"/></button>
           <li onClick={handleMenuClick}><Link to="/" className={styles.hover__blue}>Home</Link></li>
           <li onClick={handleMenuClick}><Link to="/about" className={styles.hover__amber}>About</Link></li>
-          <li onClick={handleMenuClick}><Link to="/work" className={styles.hover__purple}>Work</Link></li>
           <li onClick={handleMenuClick}><Link to="/contact" className={styles.hover__light_blue}>Contact</Link></li>
         </nav>
         </Fragment>

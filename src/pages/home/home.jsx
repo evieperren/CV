@@ -8,7 +8,6 @@ import Carousel from '../../components/carousel/carousel'
 
 const HomePage = () => {
   const [ showFeatureImg, setShowFeatureImg] = useState(false)
-  const [ workNumber, setWorkNumber ] = useState(1)
 
   function handleMouseOver(){
     setShowFeatureImg(true)
@@ -16,20 +15,12 @@ const HomePage = () => {
   function handleMouseLeave(){
     setShowFeatureImg(false)
   }
-  function handleOnScroll(){
-    window.addEventListener('scroll', function() {
-      if(window.pageYOffset > 700 && window.pageYOffset < 800){
-        setWorkNumber(1)
-      }
-      
-    })
-  }
   return(
-    <div onLoad={handleOnScroll}>
+    <div>
       <div className={styles.container}>
         <header>
           <Menu></Menu>
-          <Link smooth to="#work" className={styles.non_menu_link}>Work</Link>
+          <Link smooth to="#work" className={styles.non_menu_link}>Works</Link>
         </header>
         {showFeatureImg && (
           <Fragment>
@@ -61,11 +52,10 @@ const HomePage = () => {
         <p>A self teaching software developer born and raised in England. With a focus on Front-end development, Evie is able to work individually and in a team to create a strong UI/UX written in clean code.
         <br/> With 2 years of experience, Evie has a passion for creating a product that exceeds the clients requirements with focus on accessibility.</p>
       </div>
-        <div id="work" className={styles.work}>
-          <h2>Works</h2>
-          <h3 className={styles.work__number}>0{workNumber}</h3>
-          <Carousel></Carousel>
-        </div>
+      <div className={styles.work}>
+        <h2 id="work">Works</h2>
+        <Carousel></Carousel>
+      </div>
     </div>
   )
 }
