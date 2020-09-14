@@ -4,10 +4,7 @@ import Menu from '../../components/menu/menu'
 import styles from './home.module.scss'
 import sky from '../../assets/images/sky.jpg'
 import street from '../../assets/images/street.jpg'
-import hr_project_laptop from '../../assets/images/hr-desktop.png'
-import self_serve_tablet from '../../assets/images/self-serve.png'
-import down_arrow from '../../assets/images/angle-double-down-solid.svg'
-import pet_checkout_mobile from '../../assets/images/pets-checkout-mobile.png'
+import Carousel from '../../components/carousel/carousel'
 
 const HomePage = () => {
   const [ showFeatureImg, setShowFeatureImg] = useState(false)
@@ -67,33 +64,7 @@ const HomePage = () => {
         <div id="work" className={styles.work}>
           <h2>Works</h2>
           <h3 className={styles.work__number}>0{workNumber}</h3>
-          <ul className={styles.work__list}>
-            <li className={styles.work__list_item}>
-              <a href="/">
-                <p>HR Mentor Project</p>
-                <img src={hr_project_laptop} alt="HR mentor project" className={styles.work__img1}/>
-              </a>
-              <span className={styles.scroll} aria-label="scroll"></span>
-            </li>
-            <li className={styles.work__list_item}>
-              <a href="/">
-                <p>Self-service portal redesign</p>
-                <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
-              </a>
-              <span className={styles.scroll} aria-label="scroll"></span>
-            </li>
-            <li className={styles.work__list_item}>
-              <a href="/">
-                <p>Pet Checkout</p>
-                <img src={pet_checkout_mobile} alt="Pet Checkout" className={styles.work__img3}/>
-              </a>
-              <span className={styles.scroll} aria-label="scroll"></span>
-
-            </li>
-            <li className={styles.work__list_item}>
-              <img src={self_serve_tablet} alt="Self-service portal redesign" className={styles.work__img2}/>
-            </li>
-          </ul>
+          <Carousel></Carousel>
         </div>
     </div>
   )
