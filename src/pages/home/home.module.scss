@@ -143,115 +143,15 @@
   
 }
 
-
 .work {
   & h2 {
     margin: 10px;
+    @media only screen and (min-width: 760px){
+      text-align: left !important;
+      text-indent: 10%;
+    }
     @media only screen and (min-width: 1000px) {
       clear: both;
     }
-  }
-  &__list_item {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    width: 100vh;
-
-    @media only screen and (min-width: 1000px) {
-      width: 1000px;
-      display: inline-flex;
-      position: relative;
-    }
-  }
-  &__number {
-    font-size: 60px;
-    position: sticky;
-    z-index: 5;
-    top: 50px;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding-right: 30px;
-    color: #3C77A4;
-    font-family: 'Abril Fatface', cursive;
-    line-height: 3rem;
-
-    @media only screen and (min-width: 1000px) {
-      font-size: 130px;
-      padding-right: 130px;
-    }
-  }
-  &__img1 {
-    width: 80%;
-    opacity: 0.7;
-    margin: 0 auto;
-    display: block;
-    z-index: 1;
-    padding-bottom: 40px;
-    &:hover{
-      opacity: 1;
-    }
-    @media only screen and (min-width: 760px) {
-      max-width: 450px;
-    }
-    @media only screen and (min-width: 1000px) {
-      max-width: 700px;
-      // padding: 0 50%;
-
-    }
-  }
-  &__img2 {
-    width: 70%;
-    opacity: 0.7;
-    margin: 0 auto;
-    display: block;
-    z-index: 1;
-    padding-bottom: 40px;
-    &:hover{
-      opacity: 1;
-    }
-    @media only screen and (min-width: 760px) {
-      max-width: 350px;
-    }
-    
-    @media only screen and (min-width: 1000px) {
-      max-width: 500px;
-      // padding: 0 50%;
-
-    }
-  }
-  &__img3 {
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-    padding-bottom: 40px;
-    opacity: 0.7;
-    &:hover{
-      opacity: 1;
-    }
-    @media only screen and (min-width: 760px) {
-      max-width: 270px;
-    }
-    @media only screen and (min-width: 1000px) {
-      // padding: 0 50%;
-      width: 500px;
-    }
-  }
-}
-.scroll {
-  width: 20px;
-  height: 20px;
-  margin: 0 auto;
-  display: block;
-  background: no-repeat;
-  background-position: center;
-  background-image: url('../../assets/images/angle-double-down-solid.svg');
-
-  @media only screen and (min-width: 1000px) {
-    background-image: url('../../assets/images/angle-double-right-solid.svg');
-    display: inline-block;
-    right: 0;
-    top: 50%;
-    position: absolute;
   }
 }
