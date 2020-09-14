@@ -45,6 +45,12 @@ const Carousel = () => {
       setActiveIndex(0)
     )
   }
+  function checkActiveIndex (key){
+    if(activeIndex === key) {
+      return true 
+    }
+
+  }
   console.log(`active index: ${activeIndex}`)
   return (
     <div className={styles.slider}>
@@ -53,13 +59,14 @@ const Carousel = () => {
         <div className={styles.item}>
           <ul>
             {slides.map((item, key) => 
-            { return (
-              <li key={key}>
-                <a href="/">
-                  <p>{item.title}</p> 
-                  <img src={item.image} alt={item.title} className={styles.work__img1}/>
-                </a>
-              </li>)
+              { return (
+                <li key={key} className={checkActiveIndex(key) ? styles.active : styles.not_active }>
+                  <a href="/">
+                    <p>{item.title}</p> 
+                    <img src={item.image} alt={item.title} className={styles.work__img1}/>
+                  </a>
+                </li>
+              )
             })}
           </ul>
         </div>
