@@ -140,7 +140,6 @@
     padding: 10px 20px;
     float: right;
   }
-  
 }
 
 .work {
@@ -152,6 +151,14 @@
     }
     @media only screen and (min-width: 1000px) {
       clear: both;
+    }
+  }
+  & div.image_container {
+    position: relative;
+    & img.image {
+      width: 300px;
+      position: absolute;
+      z-index: -1;
     }
   }
 }

@@ -5,6 +5,7 @@ import styles from './home.module.scss'
 import sky from '../../assets/images/sky.jpg'
 import street from '../../assets/images/street.jpg'
 import Carousel from '../../components/carousel/carousel'
+import donut from '../../assets/images/donut.jpg'
 
 const HomePage = () => {
   const [ showFeatureImg, setShowFeatureImg] = useState(false)
@@ -54,6 +55,9 @@ const HomePage = () => {
       </div>
       <div className={styles.work}>
         <h2 id="work">Works</h2>
+        <div className={styles.image_container}>
+          <img src={donut} alt="donut" className={styles.image}/>
+        </div>
         <Carousel></Carousel>
       </div>
     </div>
