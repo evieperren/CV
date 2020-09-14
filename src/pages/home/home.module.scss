@@ -151,35 +151,12 @@
       clear: both;
     }
   }
-  &__list {
-    margin: 0;
-    padding: 0;
-    
-    @media only screen and (min-width: 1000px) {
-      display: flex;
-      // -webkit-box-orient: horizontal;
-      // -webkit-box-direction: normal;
-      // flex-direction: row;
-      // padding-bottom: 0;
-      overflow-x: scroll;
-      overflow: auto;
-      white-space: nowrap;
-    }
-
-  }
   &__list_item {
     position: relative;
     list-style: none;
     display: inline-block;
     width: 100vh;
 
-    a {
-      text-decoration: none;
-      color: #000;
-      p {
-        text-align: center;
-      }
-    }
     @media only screen and (min-width: 1000px) {
       width: 1000px;
       display: inline-flex;
