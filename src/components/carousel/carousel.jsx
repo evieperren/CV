@@ -4,6 +4,7 @@ import hr_project_laptop from '../../assets/images/hr-desktop.png'
 import self_serve_tablet from '../../assets/images/self-serve.png'
 import pet_checkout_mobile from '../../assets/images/pets-checkout-mobile.png'
 import pet_link_laptop from '../../assets/images/pets-link-generator.png'
+import cx from 'classnames'
 
 const Carousel = () => {
   const [ activeIndex, setActiveIndex ] = useState(0)
@@ -31,7 +32,7 @@ const Carousel = () => {
       year: '2019'
     },
     {
-      title: 'Self Service Portal Redesign',
+      title: 'Self Service Redesign',
       image: self_serve_tablet,
       class: styles.tablet,
       progress: styles._100,
@@ -67,9 +68,12 @@ const Carousel = () => {
             {return (
               <Fragment>
                 {checkActiveIndex(key) && (
+                  <Fragment>
+                  <div className={styles.feature}>
+                    <h4>{item.title}</h4>
+                  </div>
                   <li key={activeIndex}>
                     <a href="/" className={styles.item}>
-                      <h4 className={styles.title}>{item.title}</h4> 
                       <div className={styles.feature_wrapper}>
                         <div className={styles.year_wrapper}>
                           <p>{item.year}</p>
@@ -81,11 +85,12 @@ const Carousel = () => {
                     <div className={styles.container}>
                       <div>0{activeIndex + 1}</div>
                         <div className={styles.progress_bar}>
-                          <div className={item.progress}></div>
+                          <div className={cx(item.progress, styles.bar)}></div>
                         </div>
                       <div>0{slides.length}</div>
                     </div>
                   </li>
+                  </Fragment>
                   )}
               </Fragment>
             )

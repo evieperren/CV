@@ -144,6 +144,7 @@
 }
 
 .work {
+  position: relative;
   & h2 {
     margin: 10px;
     @media only screen and (min-width: 760px){
@@ -154,12 +155,7 @@
       clear: both;
     }
   }
-  & div.image_container {
-    position: relative;
-    & img.image {
-      width: 300px;
-      position: absolute;
-      z-index: -1;
-    }
-  }
+}
+.footer {
+  width: 100%;
 }

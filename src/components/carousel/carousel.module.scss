@@ -15,7 +15,7 @@
 .container {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   align-items: center;
 
   & .slider {
@@ -43,8 +43,12 @@
           justify-content: center;
 
           & .year_wrapper {
-            position: absolute;
-            left: 30%; 
+
+            
+            @media only screen and (min-width: 760px) {
+              position: absolute;
+              left: 30%; 
+            }
 
             & p {
               writing-mode: vertical-rl;
@@ -55,9 +59,14 @@
             & div {
               width: 2px;
               background-color: #c4c4c4;
-              height: 100px;
+              height: 40px;
               margin: 0;
               display: inline-block;
+
+              @media only screen and (min-width: 760px) {
+                height: 100px;
+
+              }
             }
           }
           & img {
@@ -99,33 +108,32 @@
         display: flex;
         justify-content: space-around;
         padding: 30px 0;
+
         & div.progress_bar{
           height: 2px;
-          width: 80%;
+          width: 65%;
           background-color: #c4c4c4;
 
-          & ._25 {
-            background-color: #000;
-            width: 25%;
-            height: 2px;
+          @media only screen and (min-width: 760px) {
+            width: 80%;
           }
-          & ._50 {
+
+          & .bar {
             background-color: #000;
-            width: 50%;
             height: 2px;
 
-          }
-          & ._75 {
-            background-color: #000;
-            width: 75%;
-            height: 2px;
-
-          }
-          & ._100 {
-            background-color: #000;
-            width: 100%;
-            height: 2px;
-
+            &._25 {
+              width: 25%;
+            }
+            &._50 {
+              width: 50%;
+            }
+            &._75 {
+              width: 75%;
+            }
+            &._100 {
+              width: 100%;
+            }
           }
         }
       }
@@ -149,6 +157,34 @@
   }
   @media only screen and (min-width: 1000px) {
     font-size: 130px;
-    padding-right: 130px;
+    padding-right: 65px;
+  }
+}
+.feature {
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #797979;
+  width: 10%;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+
+  @media only screen and (min-width: 760px) {
+    padding: 63px;
+    right: 119px;
+    top: 63px;
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 1000px) {
+    padding: 81px;
+    right: 217px;
+    top: 302px;
+    font-size: 20px;
+  }
+  @media only screen and (min-width: 1400px) {
+    padding: 100px;
+    right: 350px;
+    top: 270px;
+    font-size: 29px;
   }
 }
