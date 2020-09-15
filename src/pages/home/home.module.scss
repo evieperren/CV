@@ -19,7 +19,7 @@
       align-items: center;
     }
     & a.non_menu_link {
-      color: #000;
+      @include header-text-transition;
       text-decoration: none;
       padding: 30px;
       @media only screen and (min-width: 1000px) {
@@ -36,6 +36,7 @@
     font-weight: 100;
     margin:0 0 0 0;
     padding-left: 30px;
+    @include header-text-transition;
 
     @media only screen and (min-width: 760px) {
       font-size: 140px; 

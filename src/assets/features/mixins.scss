@@ -5,3 +5,8 @@
   animation-duration: 30s;
   animation-iteration-count: infinite;
 }
+@mixin header-text-transition {
+  animation-name: header-text-transition;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}

@@ -4,37 +4,38 @@ import hr_project_laptop from '../../assets/images/hr-desktop.png'
 import self_serve_tablet from '../../assets/images/self-serve.png'
 import pet_checkout_mobile from '../../assets/images/pets-checkout-mobile.png'
 import pet_link_laptop from '../../assets/images/pets-link-generator.png'
-import cx from 'classnames'
 
 const Carousel = () => {
   const [ activeIndex, setActiveIndex ] = useState(0)
-  const [ progressLevel, setProgressLevel ] = useState('')
 
   const slides = [
     {
       title: 'HR Mentor Project',
       image: hr_project_laptop,
       class: styles.laptop,
-      progress: styles._25
+      progress: styles._25, 
+      year: '2020'
     },
     {
       title: 'Pet Checkout',
       image: pet_checkout_mobile,
       class: styles.mobile,
-      progress: styles._50
+      progress: styles._50,
+      year: '2019'
     },
     {
       title: 'Link Generator',
       image: pet_link_laptop,
       class: styles.laptop,
-      progress: styles._75
+      progress: styles._75,
+      year: '2019'
     },
     {
       title: 'Self Service Portal Redesign',
       image: self_serve_tablet,
       class: styles.tablet,
-      progress: styles._100
-
+      progress: styles._100,
+      year: '2019'
     }
   ]
 
@@ -54,25 +55,8 @@ const Carousel = () => {
     )
   }
   function checkActiveIndex (key){
-    if(activeIndex === key) {
-      return true 
-    }
-
+    if(activeIndex === key) return true 
   }
-  // switch (activeIndex){
-  //   case 0: 
-  //     setProgressLevel(styles._25)
-  //     break
-  //   case 1: 
-  //     setProgressLevel(styles._50)
-  //     break
-  //   case 2:
-  //     setProgressLevel(styles._75)
-  //     break
-  //   case 3: 
-  //     setProgressLevel(styles._100)
-  //     break
-  // }
   return (
     <Fragment>
       <h3 className={styles.number}>0{activeIndex + 1}</h3>
@@ -83,10 +67,16 @@ const Carousel = () => {
             {return (
               <Fragment>
                 {checkActiveIndex(key) && (
-                  <li key={key}>
+                  <li key={activeIndex}>
                     <a href="/" className={styles.item}>
                       <h4 className={styles.title}>{item.title}</h4> 
-                      <img src={item.image} alt={item.title} className={item.class}/>
+                      <div className={styles.feature_wrapper}>
+                        <div className={styles.year_wrapper}>
+                          <p>{item.year}</p>
+                          <div></div>
+                        </div>
+                        <img src={item.image} alt={item.title} className={item.class}/>
+                      </div>
                     </a>
                     <div className={styles.container}>
                       <div>0{activeIndex + 1}</div>
