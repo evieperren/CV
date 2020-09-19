@@ -1,16 +1,25 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import Menu from '../../components/menu/menu'
 import styles from './about.module.scss'
 
 const AboutPage = () => {
-  const [year, setYear] = useState(2019)
+  const [year, setYear] = useState(2018)
 
-  function handleScroll(){
-    console.log('scrolling')
-  }
+  useLayoutEffect(() => {
+    const onScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+     if(scrollPosition >= 2000) { 
+        setYear(2019)
+       } else {
+         setYear(2018)
+       }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+    
+  }, [])
   return (
-    <div className={styles.container} onScroll={handleScroll}>
+    <div className={styles.container}>
        <header>
           <Menu></Menu>
         </header>
@@ -19,12 +28,15 @@ const AboutPage = () => {
           <span>SOFTWARE</span>
           <span>DEVELOPER</span>
         </h1>
+        <p className={styles.feature}></p>
         <main className={styles.grid}>
           <div>
-            <h2>{year}</h2>
-            <h2>2020</h2>
+            <h2>
+              {year} <br/>
+              2020
+            </h2>
           </div>
-          <div>
+          <div className={styles.content}>
             <p><strong className={styles.heading}>Evie</strong> is a Front-End Software Developer born and raised in Hampshire, UK. With a passion for UI/UX, Evie has learnt to develop unique and highly functional systems from requirements. </p>
             <p>Since 2018, Evie has been building her skills in her free time as well as working full time as a developer at a health insurance company.</p>
             <p>In 2019, Evie started an apprenticeship with FireBrand, recieving a Level 4 Software Developer accreditation.</p>
@@ -35,6 +47,11 @@ const AboutPage = () => {
               <li>Udemy Courses</li>
             </ul>
             <h3>Contact</h3>
+            <ul>
+              <li><a href="mailto:evie.butland@gmail.com">Email</a></li>
+              <li><a href="tel:07720764111">Phone</a></li>
+              <li><a href="www.linkedin.com/in/evie-butland-432a33170">LinkedIn</a></li>
+            </ul>
           </div>
         </main>
     </div>
