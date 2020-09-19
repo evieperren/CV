@@ -1,9 +1,6 @@
 @keyframes background-colour-transition{
   0% {
-    background-color: #fff;
-  }
-  10% {
-    background-color: #bebebe;
+    background-color: $white;
   }
   20% {
     background-color: #797979;
@@ -15,7 +12,7 @@
     background-color: #2b2b2b;
   }
   50% {
-    background-color: #000;
+    background-color: $black;
   }
   60% {
     background-color: #2b2b2b;
@@ -26,22 +23,19 @@
   80% {
     background-color: #797979;
   }
-  90% {
-    background-color: #bebebe;
-  }
   100% {
-   background-color: #fff;
+   background-color: $white;
   }
  }
 
  @keyframes header-text-transition {
   0% {
-    color: #000;
+    color: $black;
   }
   50% {
-    color: #fff;
+    color: #DBDBDB;
   }
   100% {
-    color: #000;
+    color: $black;
   }
  }

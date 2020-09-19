@@ -16,7 +16,7 @@ const Layout = () => {
     
     setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 2000)
 
   }, [])
   return(

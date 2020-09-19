@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react'
 import Menu from '../../components/menu/menu'
+import styles from './about.module.scss'
 
 const AboutPage = () => {
   return (
-    <Fragment>
+    <div className={styles.container}>
        <header>
           <Menu></Menu>
         </header>
         <p>About me</p>
-    </Fragment>
+    </div>
   )
 }
 export default AboutPage

@@ -1,3 +1,5 @@
+@import '../../assets/features/main.scss';
+
 .scroll_left {
   width: 30px;
   height: 30px;
@@ -32,10 +34,9 @@
       list-style: none;
       text-align: center;
       
-
       & .item {
         text-decoration: none;
-        color: #000;
+        color: $black;
         text-align: center;
 
         & .feature_wrapper {
@@ -43,8 +44,6 @@
           justify-content: center;
 
           & .year_wrapper {
-
-            
             @media only screen and (min-width: 760px) {
               position: absolute;
               left: 30%; 
@@ -70,7 +69,6 @@
             }
           }
           & img {
-    
             &.mobile {
               max-width: 100px;
               width: 100%;
@@ -99,9 +97,7 @@
               }
             }
           }
-          
         }
-
       }
   
       & div.container {
@@ -119,7 +115,7 @@
           }
 
           & .bar {
-            background-color: #000;
+            background-color: $black;
             height: 2px;
 
             &._25 {
@@ -163,7 +159,7 @@
 .feature {
   z-index: -1;
   text-align: center;
-  color: #000;
+  color: $black;
   
   @media only screen and (min-width: 760px) {
     width: 10%;
