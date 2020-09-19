@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Menu from '../../components/menu/menu'
 import styles from './about.module.scss'
 
@@ -37,21 +38,32 @@ const AboutPage = () => {
             </h2>
           </div>
           <div className={styles.content}>
-            <p><strong className={styles.heading}>Evie</strong> is a Front-End Software Developer born and raised in Hampshire, UK. With a passion for UI/UX, Evie has learnt to develop unique and highly functional systems from requirements. </p>
-            <p>Since 2018, Evie has been building her skills in her free time as well as working full time as a developer at a health insurance company.</p>
-            <p>In 2019, Evie started an apprenticeship with FireBrand, recieving a Level 4 Software Developer accreditation.</p>
-            <p>With 2 years of experience, Evie has a passion for creating a product that exceeds the clients requirements with focus on accessibility.</p>
-            <h3>Accreditations</h3>
-            <ul>
-              <li>Level 4 Software Developer Diploma</li>
-              <li>Udemy Courses</li>
-            </ul>
-            <h3>Contact</h3>
-            <ul>
-              <li><a href="mailto:evie.butland@gmail.com">Email</a></li>
-              <li><a href="tel:07720764111">Phone</a></li>
-              <li><a href="www.linkedin.com/in/evie-butland-432a33170">LinkedIn</a></li>
-            </ul>
+            <div>
+              <p><strong className={styles.heading}>Evie</strong> is a Front-End Software Developer born and raised in Hampshire, UK. With a passion for UI/UX, Evie has learnt to develop unique and highly functional systems from requirements. </p>
+              <p>Since 2018, Evie has been building her skills in her free time as well as working full time as a developer at a health insurance company.</p>
+              <p>In 2019, Evie started an apprenticeship with FireBrand, recieving a Level 4 Software Developer accreditation.</p>
+              <p>With 2 years of experience, Evie has a passion for creating a product that exceeds the clients requirements with focus on accessibility.</p>
+            </div>
+            <div>
+              <h3>Accreditations</h3>
+              <ul>
+                <li>Level 4 Software Developer Diploma</li>
+                <li>Udemy Courses</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contact</h3>
+              <ul>
+                <li><Link to="mailto:evie.butland@gmail.com">Email</Link></li>
+                <li><Link to="tel:07720764111">Phone</Link></li>
+                <li><Link to="www.linkedin.com/in/evie-butland-432a33170">LinkedIn</Link></li>
+              </ul>
+            </div>
+            <div className={styles.credits}>
+              <h3>Credits</h3>
+              <p>Design & Development</p>
+              <Link to="/">Evie Perren</Link>
+            </div>
           </div>
         </main>
     </div>

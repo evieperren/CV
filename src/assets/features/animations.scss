@@ -1,9 +1,9 @@
-@keyframes background-colour-transition{
+@keyframes background-colour-transition {
   0% {
     background-color: $white;
   }
   20% {
-    background-color: #797979;
+    background-color: $highlight-tertiary;
   }
   30% {
     background-color: #4b4b4b;
@@ -21,7 +21,7 @@
     background-color: #4b4b4b;
   } 
   80% {
-    background-color: #797979;
+    background-color: $highlight-tertiary;
   }
   100% {
    background-color: $white;

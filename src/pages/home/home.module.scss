@@ -1,7 +1,7 @@
 @import '../../assets/features/main.scss';
 
 .container {
-  @include background-colour-animation;
+  // @include background-colour-animation;
   position: relative;
   height: 450px;
   padding-bottom: 20px;
@@ -19,7 +19,7 @@
       align-items: center;
     }
     & a.non_menu_link {
-      @include header-text-transition;
+      // @include header-text-transition;
       text-decoration: none;
       padding: 30px;
       @media only screen and (min-width: 1000px) {
