@@ -2,10 +2,11 @@ import React, { Fragment, useState } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import Menu from '../../components/menu/menu'
 import styles from './home.module.scss'
-import sky from '../../assets/images/sky.jpg'
-import street from '../../assets/images/street.jpg'
+import image1 from '../../assets/images/banksy.jpg'
+import image2 from '../../assets/images/busy-street.jpg'
 import Carousel from '../../components/carousel/carousel'
 import mountains from '../../assets/images/mountains.png.jpeg'
+
 const HomePage = () => {
   const [ showFeatureImg, setShowFeatureImg] = useState(false)
 
@@ -24,13 +25,7 @@ const HomePage = () => {
         </header>
         {showFeatureImg && (
           <Fragment>
-            <img className={styles.img__top} src={sky}/>
-            <span className={styles.img__reference}>Photo by 
-              <a href="https://unsplash.com/@kevinmueller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Kevin Mueller</a> on 
-                <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash
-              </a>
-            </span>
+            <img className={styles.img__top} src={image1} alt="Photo by Nick Fewings on Unsplash"/>
           </Fragment>
         )}
         <h1 onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
@@ -40,11 +35,7 @@ const HomePage = () => {
         <p className={styles.feature__header}></p>
         {showFeatureImg && (
           <Fragment>
-            <img className={styles.img__bottom} src={street} alt=""/>
-            <span className={styles.img__reference}>Photo by 
-              <a href="https://unsplash.com/@pelayoarbues?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pelayo Arbués</a> on 
-              <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
-            </span>
+            <img className={styles.img__bottom} src={image2} alt="Photo by Ryoji Iwata on Unsplash"/>
           </Fragment>
         )}
       </div>

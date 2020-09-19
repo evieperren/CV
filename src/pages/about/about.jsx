@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Menu from '../../components/menu/menu'
 import styles from './about.module.scss'
 
@@ -8,7 +8,7 @@ const AboutPage = () => {
        <header>
           <Menu></Menu>
         </header>
-        <p>About me</p>
+        <h1>FRONT-END <br/>SOFTWARE<br/> DEVELOPER</h1>
     </div>
   )
 }
