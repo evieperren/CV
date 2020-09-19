@@ -4,7 +4,7 @@
   position: absolute;
   width: 100%;
   background-color: $white;
-  opacity: 0.95;
+  opacity: 0.98;
   height: 100vh;
   top: 0;
   z-index: 100;
@@ -20,7 +20,7 @@
       font-size: 55px;
 
       @media only screen and (min-width: 1000px) {
-        font-size: 80px;
+        font-size: 180px;
       }
       
       &:hover {
@@ -33,12 +33,6 @@
           }
           &__amber {
             color: $highlight-secondary;
-          }
-          &__purple {
-            color: $highlight-tertiary;
-          }
-          &__light_blue {
-            color: $highlight-quaternary;
           }
         }
       }

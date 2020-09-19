@@ -1,4 +1,31 @@
+@import '../../assets/features/main.scss';
+
 .container {
   background-color: #1E1F1E;
   color: #DBDBDB;
+
+  h1.title {
+    font-size: 240px;
+    font-family: $font-base;
+    text-align: right;
+    padding-right: 10px;
+
+    & span {
+      display: block;
+      // background: linear-gradient(#1E1F1E  60%, #DBDBDB 0%);
+      line-height: 0.8em;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    h2 {
+      font-family: $font-feature;
+    }
+    & .heading {
+      font-weight: bold;
+    }
+  }
 }
+

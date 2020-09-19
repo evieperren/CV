@@ -6,7 +6,6 @@ const LoadingPage = () => {
 
   useEffect(() => {
     const time = new Date()
-    console.log(time)
     for( let i = 0; i < 100; i++){
       setTimeout(() => {
 
@@ -16,11 +15,11 @@ const LoadingPage = () => {
 
   })
   return (
-    <Fragment>
+    <main>
       <p>loading page here</p>
       <p>{loadingPercentage}</p>
 
-    </Fragment>
+    </main>
 
   )
 }

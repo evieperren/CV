@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import AboutPage from '../pages/about/about'
 import HomePage from '../pages/home/home'
-import ContactPage from '../pages/contact/contact'
 import { MenuContext } from '../context/menu-context'
 import LoadingPage from '../pages/loading/loading'
 
@@ -32,9 +31,6 @@ const Layout = () => {
                     </Route>
                     <Route path="/about">
                       <AboutPage></AboutPage>
-                    </Route>
-                    <Route path="/contact">
-                      <ContactPage></ContactPage>
                     </Route>
                   </MenuContext.Provider>
                 </Fragment>

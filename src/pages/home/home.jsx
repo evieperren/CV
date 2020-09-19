@@ -29,8 +29,8 @@ const HomePage = () => {
           </Fragment>
         )}
         <h1 onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          <span className={styles.float__left}>Evie</span>
-          <span className={styles.float__right}>Perren</span>
+          <span className={styles.float__left}>EVIE</span>
+          <span className={styles.float__right}>PERREN</span>
         </h1>
         <p className={styles.feature__header}></p>
         {showFeatureImg && (
@@ -40,8 +40,8 @@ const HomePage = () => {
         )}
       </div>
       <div className={styles.introduction}>
-        <p>A self teaching software developer born and raised in England. With a focus on Front-end development, Evie is able to work individually and in a team to create a strong UI/UX written in clean code.
-        <br/> With 2 years of experience, Evie has a passion for creating a product that exceeds the clients requirements with focus on accessibility.</p>
+        <p>A self-taught Software Developer born and raised in England. With a focus on Front-End development, Evie is able to work individually and in a team to create a strong UI/UX written in clean code.
+        </p>
       </div>
       <div className={styles.work}>
         <h2 id="work">Works</h2>

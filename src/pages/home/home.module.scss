@@ -29,20 +29,14 @@
     }
   }
 
-  h1 {
-    font-size: 80px; 
+  h1 { 
     position: relative;
     z-index: 10;
-    font-weight: 100;
     margin:0 0 0 0;
     padding-left: 30px;
     @include header-text-transition;
 
-    @media only screen and (min-width: 760px) {
-      font-size: 140px; 
-    }
     @media only screen and (min-width: 1000px) {
-      font-size: 300px; 
       text-align: left;
       line-height: 16rem;
     }
@@ -82,7 +76,7 @@
       position: absolute;
       left: -178px;
       width: 1000px;
-      top: 220px;
+      top: 300px;
       display: block;
     }
     &__right {
