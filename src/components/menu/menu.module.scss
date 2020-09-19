@@ -27,13 +27,14 @@
         border-radius: 50%;
         border: 1px solid $black;
 
-        &.hover {
-          &__blue {
-            color: $highlight-primary;
-          }
-          &__amber {
-            color: $highlight-secondary;
-          }
+        &.primary {
+          color: $highlight-primary;
+        }
+        &.secondary {
+          color: $highlight-secondary;
+        }
+        &.tertiary {
+          color: $highlight-tertiary;
         }
       }
     }

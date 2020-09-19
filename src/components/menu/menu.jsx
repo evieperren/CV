@@ -17,8 +17,9 @@ const Menu = () => {
         <Fragment>
         <nav className={styles.menu}>
          <button className={cx(styles.button, styles.button__close)} onClick={handleMenuClick} aria-label="close menu">Close</button>
-          <li onClick={handleMenuClick}><Link to="/" className={styles.hover__blue}>Home</Link></li>
-          <li onClick={handleMenuClick}><Link to="/about" className={styles.hover__amber}>About</Link></li>
+          <li onClick={handleMenuClick}><Link to="/" className={styles.primary}>Home</Link></li>
+          <li onClick={handleMenuClick}><Link to="/about" className={styles.secondary}>About</Link></li>
+          <li onClick={handleMenuClick}><Link to="/work" className={styles.tertiary}>Work</Link></li>
         </nav>
         </Fragment>
       ): (

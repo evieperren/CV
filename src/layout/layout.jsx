@@ -32,7 +32,7 @@ const Layout = () => {
           <Switch>
               {!isLoading ? (
                 <Fragment>
-                  <CurrentPageContext.Provider value={{currentPage, setCurrentPage}}>
+                  {/* <CurrentPageContext.Provider value={{currentPage, setCurrentPage}}> */}
                   <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
                     <header>
                       <Menu></Menu>
@@ -50,11 +50,11 @@ const Layout = () => {
                       <WorkPage></WorkPage>
                     </Route>
                   </MenuContext.Provider>
-                  </CurrentPageContext.Provider>
+                {/* </CurrentPageContext.Provider> */}
                 </Fragment>
               ):(
                 <LoadingPage></LoadingPage>
-              )}
+                )}
           </Switch>
       </main>
     </Router>

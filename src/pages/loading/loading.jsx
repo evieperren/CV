@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 import { useEffect } from 'react'
+import { CurrentPageContext } from '../../context/current-page'
 
 const LoadingPage = () => {
   const [ loadingPercentage, setLoadingPercentage ] = useState(0)

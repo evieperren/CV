@@ -6,7 +6,7 @@ const HomePage = () => {
   const { setCurrentPage } = useContext(CurrentPageContext)
 
   useEffect(() => {
-    setCurrentPage('HOME')
+    // setCurrentPage('HOME')
   }, [])
 
   return(

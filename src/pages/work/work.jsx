@@ -7,7 +7,7 @@ const WorkPage = () => {
   const { setCurrentPage } = useContext(CurrentPageContext)
 
   useEffect(() => {
-    setCurrentPage('WORK')
+    // setCurrentPage('WORK')
   })
   return (
     <main className={styles.work}>

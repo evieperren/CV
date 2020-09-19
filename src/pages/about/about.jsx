@@ -8,9 +8,9 @@ const AboutPage = () => {
   const { setCurrentPage } = useContext(CurrentPageContext)
 
   useEffect(() => {
-    setCurrentPage('ABOUT')
+    // setCurrentPage('ABOUT')
   })
-  
+
   useLayoutEffect(() => {
     const onScroll = () => {
     const scrollPosition = window.scrollY + window.innerHeight;
