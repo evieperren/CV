@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 
 const LoadingPage = () => {
@@ -12,7 +12,6 @@ const LoadingPage = () => {
         setLoadingPercentage(i)
       }, 2000)
     }
-
   })
   return (
     <main>
