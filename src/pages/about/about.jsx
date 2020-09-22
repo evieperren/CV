@@ -5,7 +5,7 @@ import styles from './about.module.scss'
 
 const AboutPage = () => {
   const [year, setYear] = useState(2018)
-  const { setCurrentPage } = useContext(CurrentPageContext)
+  // const { setCurrentPage } = useContext(CurrentPageContext)
 
   useEffect(() => {
     // setCurrentPage('ABOUT')

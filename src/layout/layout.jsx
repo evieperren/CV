@@ -5,13 +5,14 @@ import HomePage from '../pages/home/home'
 import { MenuContext } from '../context/menu-context'
 import LoadingPage from '../pages/loading/loading'
 import Menu from '../components/menu/menu';
-import { CurrentPageContext } from '../context/current-page'
+
 import WorkPage from '../pages/work/work'
+import { ThemeContext } from '../context/theme-context'
 
 const Layout = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false)
   const [ isLoading, setIsLoading ] = useState(true)
-  const [ currentPage, setCurrentPage ] = useState('')
+  const [ theme, setTheme] = useState('LIGHT')
   const [ displayAdditionalLink, setDisplayAdditionalLink ] = useState(false)
 
   useEffect(() => {
@@ -21,40 +22,44 @@ const Layout = () => {
     }, 2000)
 
   }, [])
-
-  if(currentPage === 'HOME'){
-    setDisplayAdditionalLink(true)
+  
+  switch(theme){
+    case 'LIGHT':
+      console.log('light theme')
+      break
+    case 'DARK': 
+      console.log('dark theme')
+      break
   }
+
   return(
     <Fragment>
     <Router>
       <main>
           <Switch>
-              {!isLoading ? (
-                <Fragment>
-                  {/* <CurrentPageContext.Provider value={{currentPage, setCurrentPage}}> */}
-                  <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
-                    <header>
-                      <Menu></Menu>
-                      {displayAdditionalLink && (
-                        <Link smooth to="/work">Works</Link>
-                      )}
-                    </header>
-                    <Route exact path="/">
-                      <HomePage></HomePage>
-                    </Route>
-                    <Route path="/about">
-                      <AboutPage></AboutPage>
-                    </Route>
-                    <Route path="/work">
-                      <WorkPage></WorkPage>
-                    </Route>
-                  </MenuContext.Provider>
-                {/* </CurrentPageContext.Provider> */}
-                </Fragment>
+            {!isLoading ? (
+              <ThemeContext.Provider value={{theme, setTheme}}>
+                <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
+                  <header>
+                    <Menu></Menu>
+                    {displayAdditionalLink && (
+                      <Link smooth to="/work">Works</Link>
+                    )}
+                  </header>
+                  <Route exact path="/">
+                    <HomePage></HomePage>
+                  </Route>
+                  <Route path="/about">
+                    <AboutPage></AboutPage>
+                  </Route>
+                  <Route path="/work">
+                    <WorkPage></WorkPage>
+                  </Route>
+                </MenuContext.Provider>
+              </ThemeContext.Provider>
               ):(
-                <LoadingPage></LoadingPage>
-                )}
+              <LoadingPage></LoadingPage>
+              )}
           </Switch>
       </main>
     </Router>

@@ -1,13 +1,17 @@
 import React, { useEffect, useContext } from 'react'
 import { CurrentPageContext } from '../../context/current-page'
+import { ThemeContext } from '../../context/theme-context'
 import styles from './home.module.scss'
 
 const HomePage = () => {
-  const { setCurrentPage } = useContext(CurrentPageContext)
+  const { setTheme } = useContext(ThemeContext)
 
-  useEffect(() => {
-    // setCurrentPage('HOME')
-  }, [])
+  function handleLightClick(){
+    setTheme('LIGHT')
+  }
+  function handleDarkClick(){
+    setTheme('DARK')
+  }
 
   return(
     <div>
@@ -17,8 +21,8 @@ const HomePage = () => {
           <span className={styles.float__right}>PERREN</span>
         </h1>
         <p className={styles.feature__header}></p>
-        <button>Light</button>
-        <button>Dark</button>
+        <button onClick={handleLightClick}>Light</button>
+        <button onClick={handleDarkClick}>Dark</button>
       </div>
     </div>
   )
