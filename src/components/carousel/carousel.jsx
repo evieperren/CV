@@ -1,10 +1,9 @@
 import React, { useState, Fragment } from 'react'
-import styles from './carousel.module.scss'
+import './carousel.scss'
 import hr_project_laptop from '../../assets/images/hr-desktop.png'
 import self_serve_tablet from '../../assets/images/self-serve.png'
 import pet_checkout_mobile from '../../assets/images/pets-checkout-mobile.png'
 import pet_link_laptop from '../../assets/images/pets-link-generator.png'
-import cx from 'classnames'
 
 const Carousel = () => {
   const [ activeIndex, setActiveIndex ] = useState(0)
@@ -13,29 +12,29 @@ const Carousel = () => {
     {
       title: 'HR Mentor Project',
       image: hr_project_laptop,
-      class: styles.laptop,
-      progress: styles._25, 
+      class: "laptop",
+      progress: "_25", 
       year: '2020'
     },
     {
       title: 'Pet Checkout',
       image: pet_checkout_mobile,
-      class: styles.mobile,
-      progress: styles._50,
+      class: "mobile",
+      progress: "_50",
       year: '2019'
     },
     {
       title: 'Link Generator',
       image: pet_link_laptop,
-      class: styles.laptop,
-      progress: styles._75,
+      class: "laptop",
+      progress: "_75",
       year: '2019'
     },
     {
       title: 'Self Service Redesign',
       image: self_serve_tablet,
-      class: styles.tablet,
-      progress: styles._100,
+      class: "tablet",
+      progress: "_100",
       year: '2019'
     }
   ]
@@ -59,33 +58,33 @@ const Carousel = () => {
     if(activeIndex === key) return true 
   }
   return (
-    <Fragment>
-      <h3 className={styles.number}>0{activeIndex + 1}</h3>
-      <div className={styles.container}>
-        <span className={styles.scroll_left} aria-label="scroll left" onClick={goToPreviousSlide}></span>
-        <ul className={styles.slider}>
+    <div className="carousel">
+      <h3 className="number">0{activeIndex + 1}</h3>
+      <div className="container">
+        <span className="scroll_left" aria-label="scroll left" onClick={goToPreviousSlide}></span>
+        <ul className="slider">
           {slides.map((item, key) => 
             {return (
               <Fragment>
                 {checkActiveIndex(key) && (
                   <Fragment>
-                  <div className={styles.feature}>
+                  <div className="feature">
                     <h4>{item.title}</h4>
                   </div>
                   <li key={activeIndex}>
-                    <a href="/" className={styles.item}>
-                      <div className={styles.feature_wrapper}>
-                        <div className={styles.year_wrapper}>
+                    <a href="/" className="item">
+                      <div className="feature_wrapper">
+                        <div className="year_wrapper">
                           <p>{item.year}</p>
                           <div></div>
                         </div>
                         <img src={item.image} alt={item.title} className={item.class}/>
                       </div>
                     </a>
-                    <div className={styles.container}>
+                    <div className="container">
                       <div>0{activeIndex + 1}</div>
-                        <div className={styles.progress_bar}>
-                          <div className={cx(item.progress, styles.bar)}></div>
+                        <div className="progress_bar">
+                          <div className={item.progress, "bar"}></div>
                         </div>
                       <div>0{slides.length}</div>
                     </div>
@@ -96,9 +95,9 @@ const Carousel = () => {
             )
           })}
           </ul>
-          <span className={styles.scroll_right} aria-label="scroll right" onClick={goToNextSlide}></span>
+          <span className=".scroll_right" aria-label="scroll right" onClick={goToNextSlide}></span>
       </div>
-    </Fragment>
+    </div>
   )
 }
 export default Carousel

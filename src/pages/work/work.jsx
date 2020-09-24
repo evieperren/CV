@@ -1,16 +1,10 @@
-import React, { useEffect, useContext } from 'react'
-import { CurrentPageContext } from '../../context/current-page'
+import React from 'react'
 import Carousel from '../../components/carousel/carousel'
-import styles from './work.module.scss'
+import './work.scss'
 
 const WorkPage = () => {
-  const { setCurrentPage } = useContext(CurrentPageContext)
-
-  useEffect(() => {
-    // setCurrentPage('WORK')
-  })
   return (
-    <main className={styles.work}>
+    <main className="work">
       <h2>Works</h2>
       <Carousel></Carousel>
     </main>

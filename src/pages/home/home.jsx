@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../../context/theme-context'
-import styles from './home.module.scss'
+import './home.scss'
 
 const HomePage = () => {
   const { setTheme } = useContext(ThemeContext)
@@ -13,16 +13,14 @@ const HomePage = () => {
   }
 
   return(
-    <div>
-      <div className={styles.container}>
-        <h1>
-          <span className={styles.float__left}>EVIE</span>
-          <span className={styles.float__right}>PERREN</span>
-        </h1>
-        <p className={styles.feature__header}></p>
-        <button onClick={handleLightClick}>Light</button>
-        <button onClick={handleDarkClick}>Dark</button>
-      </div>
+    <div className="home container">
+      <h1>
+        <span className="float__left">EVIE</span>
+        <span className="float__right">PERREN</span>
+      </h1>
+      <p className="feature__header"></p>
+      <button onClick={handleLightClick}>Light</button>
+      <button onClick={handleDarkClick}>Dark</button>
     </div>
   )
 }

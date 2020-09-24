@@ -5,8 +5,8 @@ import HomePage from '../pages/home/home'
 import { MenuContext } from '../context/menu-context'
 import LoadingPage from '../pages/loading/loading'
 import Menu from '../components/menu/menu'
-import styles from './layout.module.scss'
-import cs from 'classnames'
+import './layout.scss'
+
 import WorkPage from '../pages/work/work'
 import { ThemeContext } from '../context/theme-context'
 
@@ -24,20 +24,20 @@ const Layout = () => {
     }, 2000)
 
   }, [])
-  let currentTheme = styles.light
+  let currentTheme = theme
   switch(theme){
     case 'DARK':
-      currentTheme = styles.dark
+      currentTheme = "dark"
       break
     default: 
-      currentTheme = styles.light
+      currentTheme = "light"
   }
 
 
   return(
     <Fragment>
     <Router>
-      <main className={cs(styles.main, currentTheme)}>
+      <main className={currentTheme}>
           <Switch>
             {!isLoading ? (
               <ThemeContext.Provider value={{theme, setTheme}}>
