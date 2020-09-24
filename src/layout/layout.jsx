@@ -4,8 +4,9 @@ import AboutPage from '../pages/about/about'
 import HomePage from '../pages/home/home'
 import { MenuContext } from '../context/menu-context'
 import LoadingPage from '../pages/loading/loading'
-import Menu from '../components/menu/menu';
-
+import Menu from '../components/menu/menu'
+import styles from './layout.module.scss'
+import cs from 'classnames'
 import WorkPage from '../pages/work/work'
 import { ThemeContext } from '../context/theme-context'
 
@@ -15,6 +16,7 @@ const Layout = () => {
   const [ theme, setTheme] = useState('LIGHT')
   const [ displayAdditionalLink, setDisplayAdditionalLink ] = useState(false)
 
+
   useEffect(() => {
     setIsLoading(true)
     setTimeout(() => {
@@ -22,20 +24,20 @@ const Layout = () => {
     }, 2000)
 
   }, [])
-  
+  let currentTheme = styles.light
   switch(theme){
-    case 'LIGHT':
-      console.log('light theme')
+    case 'DARK':
+      currentTheme = styles.dark
       break
-    case 'DARK': 
-      console.log('dark theme')
-      break
+    default: 
+      currentTheme = styles.light
   }
+
 
   return(
     <Fragment>
     <Router>
-      <main>
+      <main className={cs(styles.main, currentTheme)}>
           <Switch>
             {!isLoading ? (
               <ThemeContext.Provider value={{theme, setTheme}}>

@@ -1,0 +1,45 @@
+@import '../assets/features/main.scss';
+
+main.light {
+  background-color: $white;
+  color: $black;
+
+  a, 
+  button, 
+  h1, 
+  p, 
+  h2, 
+  h3, 
+  li {
+    color: $black;
+  }
+  a.menu {
+    color: $black;
+  }
+  div {
+    background-color: $white;
+  }
+  p {
+    border-color: $black;
+  }
+}
+
+
+
+
+
+
+.dark {
+  background-color: $black;
+  color: $white;
+  a, 
+  button {
+    color: $white;
+  }
+  p {
+    border-color: $white;
+  }
+  a.menu {
+    color: $black !important;
+  }
+}

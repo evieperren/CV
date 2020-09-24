@@ -1,5 +1,4 @@
-import React, { useEffect, useContext } from 'react'
-import { CurrentPageContext } from '../../context/current-page'
+import React, { useContext } from 'react'
 import { ThemeContext } from '../../context/theme-context'
 import styles from './home.module.scss'
 

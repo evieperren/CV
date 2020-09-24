@@ -1,20 +1,14 @@
-import React, { useState, useLayoutEffect, useContext, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { CurrentPageContext } from '../../context/current-page'
 import styles from './about.module.scss'
 
 const AboutPage = () => {
   const [year, setYear] = useState(2018)
-  // const { setCurrentPage } = useContext(CurrentPageContext)
-
-  useEffect(() => {
-    // setCurrentPage('ABOUT')
-  })
 
   useLayoutEffect(() => {
     const onScroll = () => {
     const scrollPosition = window.scrollY + window.innerHeight;
-     if(scrollPosition >= 2000) { 
+     if(scrollPosition >= 1850) { 
         setYear(2019)
        } else {
          setYear(2018)
