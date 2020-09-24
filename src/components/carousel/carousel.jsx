@@ -95,7 +95,7 @@ const Carousel = () => {
             )
           })}
           </ul>
-          <span className=".scroll_right" aria-label="scroll right" onClick={goToNextSlide}></span>
+          <span className="scroll_right" aria-label="scroll right" onClick={goToNextSlide}></span>
       </div>
     </div>
   )

@@ -9,7 +9,8 @@ main.light {
   h1, 
   p, 
   h2, 
-  h3, 
+  h3,
+  h4, 
   li {
     color: $black;
   }
@@ -33,7 +34,13 @@ main.light {
   background-color: $black;
   color: $white;
   a, 
-  button {
+  button,
+  h1, 
+  p, 
+  h2, 
+  h3,
+  h4, 
+  li  {
     color: $white;
   }
   p {

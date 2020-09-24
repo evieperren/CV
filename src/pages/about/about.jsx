@@ -7,13 +7,16 @@ const AboutPage = () => {
 
   useLayoutEffect(() => {
     const onScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-     if(scrollPosition >= 1850) { 
+      const scrollPosition = window.scrollY + window.innerHeight;
+
+      if(scrollPosition < 1650){
+        setYear(2018)
+      } else if(scrollPosition > 1650 && scrollPosition < 1950){
         setYear(2019)
-       } else {
-         setYear(2018)
-       }
-    };
+      } else {
+        setYear(2020)
+      }
+    }
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
     
