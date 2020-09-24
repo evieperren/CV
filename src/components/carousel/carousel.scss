@@ -157,34 +157,4 @@
       padding-right: 65px;
     }
   }
-  .feature {
-    // z-index: -1;
-    text-align: center;
-    color: $black;
-    font-family: $font-title;
-    
-    @media only screen and (min-width: 760px) {
-      width: 10%;
-      border-radius: 50%;
-      position: absolute;
-      color: #fff;
-      background-color: $highlight-tertiary;
-      padding: 63px;
-      right: 119px;
-      top: 63px;
-      font-size: 14px;
-    }
-    @media only screen and (min-width: 1000px) {
-      padding: 81px;
-      right: 217px;
-      top: 302px;
-      font-size: 20px;
-    }
-    @media only screen and (min-width: 1400px) {
-      padding: 100px;
-      right: 350px;
-      top: 270px;
-      font-size: 29px;
-    }
-  }
 }

@@ -46,7 +46,9 @@ main.light {
   p {
     border-color: $white;
   }
-  a.menu {
-    color: $black !important;
+  nav.menu {
+    a {
+      color: $black;
+    }
   }
 }

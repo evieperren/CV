@@ -68,9 +68,7 @@ const Carousel = () => {
               <Fragment>
                 {checkActiveIndex(key) && (
                   <Fragment>
-                  <div className="feature">
-                    <h4>{item.title}</h4>
-                  </div>
+                  <h4>{item.title}</h4>
                   <li key={activeIndex}>
                     <a href="/" className="item">
                       <div className="feature_wrapper">
