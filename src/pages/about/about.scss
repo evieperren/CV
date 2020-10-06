@@ -1,5 +1,47 @@
 @import '../../assets/features/main.scss';
 
+main.light {
+  .feature {
+    @include border-colour(light)
+  }
+  .content {
+    a {
+      @include text-colour(light);
+      @include border-colour(light);
+      &:hover {
+        @include border-colour(dark)
+      }
+    }
+  }
+  .credits{
+    a {
+      @include text-colour(light);
+    }
+  }
+}
+main.dark {
+  .feature {
+    @include border-colour(dark)
+  }
+  .grid {
+    .content {
+      li {
+        a {
+          @include text-colour(dark);
+          @include border-colour(dark);
+          &:hover {
+            @include border-colour(light)
+          }
+        }
+      }
+    }
+    .credits{
+      a {
+        @include text-colour(dark);
+      }
+    }
+  }
+}
 .about.container {
   h1.title {
     font-size: 240px;
@@ -15,7 +57,8 @@
   .feature {
     height: 285px;
     border-radius: 50%;
-    border: 1px solid $white;
+    border-width: 1px;
+    border-style: solid;
     position: absolute;
     right: -340px;
     width: 1200px;
@@ -59,12 +102,13 @@
       }
       a {
         text-decoration: none;
-        border-bottom: 1px solid $white;
+        border-width: 1px;
+        border-bottom-style: solid;
         &:hover {
-          border-bottom: 1px solid #4b4b4b;
+          border-width: 1px;
+          border-style: solid;
         }
       }
-
     }
     .credits{
       p {

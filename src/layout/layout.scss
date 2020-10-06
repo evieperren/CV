@@ -1,54 +1,10 @@
 @import '../assets/features/main.scss';
 
 main.light {
-  background-color: $white;
-  color: $black;
-
-  a, 
-  button, 
-  h1, 
-  p, 
-  h2, 
-  h3,
-  h4, 
-  li {
-    color: $black;
-  }
-  a.menu {
-    color: $black;
-  }
-  div {
-    background-color: $white;
-  }
-  p {
-    border-color: $black;
-  }
+  @include background-colour(light);
+  @include text-colour(light);
 }
-
-
-
-
-
-
-.dark {
-  background-color: $black;
-  color: $white;
-  a, 
-  button,
-  h1, 
-  p, 
-  h2, 
-  h3,
-  h4, 
-  li  {
-    color: $white;
-  }
-  p {
-    border-color: $white;
-  }
-  nav.menu {
-    a {
-      color: $black;
-    }
-  }
+main.dark {
+  @include background-colour(dark);
+  @include text-colour(dark);
 }

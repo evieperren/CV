@@ -1,5 +1,3 @@
-@import './animations.scss';
-
 @mixin background-colour-animation {
   animation-name: background-colour-transition;
   animation-duration: 30s;
@@ -12,9 +10,25 @@
 }
 @mixin text-colour ($colour) {
   @if($colour == light){
-    color: black;
+    color: $black !important;
   } 
   @if($colour == dark){
-    color: white
+    color: $white !important;
+  }
+}
+@mixin background-colour ($colour){
+  @if($colour == light){
+    background-color: $white !important;
+  } 
+  @if($colour == dark){
+    background-color: $black !important;
+  }
+}
+@mixin border-colour ($colour){
+  @if($colour == light){
+    border-color: $black !important;
+  } 
+  @if($colour == dark){
+    border-color: $white !important;
   }
 }

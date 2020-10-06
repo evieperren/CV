@@ -14,8 +14,6 @@ const Layout = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false)
   const [ isLoading, setIsLoading ] = useState(true)
   const [ theme, setTheme] = useState('LIGHT')
-  const [ displayAdditionalLink, setDisplayAdditionalLink ] = useState(false)
-
 
   useEffect(() => {
     setIsLoading(true)
@@ -42,12 +40,7 @@ const Layout = () => {
             {!isLoading ? (
               <ThemeContext.Provider value={{theme, setTheme}}>
                 <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
-                  <header>
                     <Menu></Menu>
-                    {displayAdditionalLink && (
-                      <Link smooth to="/work">Works</Link>
-                    )}
-                  </header>
                   <Route exact path="/">
                     <HomePage></HomePage>
                   </Route>

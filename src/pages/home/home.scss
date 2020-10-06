@@ -1,5 +1,21 @@
 @import '../../assets/features/main.scss';
 
+
+main.light {
+  & a.non_menu_link {
+    @include text-colour(light);
+  }
+
+  .feature {
+    &__header {
+      @include border-colour(light);
+    }
+    &__right {
+      @include border-colour(light);
+    }
+  }
+}
+
 .home.container {
   position: relative;
   height: 450px;
@@ -18,7 +34,6 @@
       align-items: center;
     }
     & a.non_menu_link {
-      @include text-colour(light);
       text-decoration: none;
       padding: 30px;
     }
@@ -39,7 +54,6 @@
 .float {
   &__left {
     display: block;
-
   }
   &__right {
     display: block;
@@ -66,7 +80,8 @@
     &__header {
       height: 165px;
       border-radius: 50%;
-      border: 1px solid $black;
+      border-style: solid;
+      border-width: 1px;
       position: absolute;
       left: -178px;
       width: 1000px;
@@ -75,8 +90,9 @@
     }
     &__right {
       display: block;
-      border: 1px solid $black;
       height: 165px;
+      border-style: solid;
+      border-width: 1px;
       border-radius: 50%;
       width: 1000px;
       top: 300px;
