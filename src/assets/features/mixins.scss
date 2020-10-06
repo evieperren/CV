@@ -10,3 +10,11 @@
   animation-duration: 30s;
   animation-iteration-count: infinite;
 }
+@mixin text-colour ($colour) {
+  @if($colour == light){
+    color: black;
+  } 
+  @if($colour == dark){
+    color: white
+  }
+}

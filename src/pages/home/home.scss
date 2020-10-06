@@ -18,7 +18,7 @@
       align-items: center;
     }
     & a.non_menu_link {
-      color: $black;
+      @include text-colour(light);
       text-decoration: none;
       padding: 30px;
     }

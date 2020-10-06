@@ -1,7 +1,7 @@
 import React, { Fragment, useContext  } from 'react'
 import { Link } from "react-router-dom"
 import { MenuContext } from '../../context/menu-context'
-import './menu.scss'
+import styles from './menu.module.scss'
 import cx from 'classnames'
 
 const Menu = () => {
@@ -14,14 +14,14 @@ const Menu = () => {
   return (
     <Fragment>
       { isMenuOpen ? (
-        <nav className="menu">
-          <button className="button button__close" onClick={handleMenuClick} aria-label="close menu">Close</button>
-          <li onClick={handleMenuClick}><Link to="/" className="primary">Home</Link></li>
-          <li onClick={handleMenuClick}><Link to="/about" className="secondary">About</Link></li>
-          <li onClick={handleMenuClick}><Link to="/work" className="tertiary">Work</Link></li>
+        <nav className={styles.menu}>
+          <button className={cx(styles.button, styles.close)} onClick={handleMenuClick} aria-label="close menu">Close</button>
+          <li onClick={handleMenuClick}><Link to="/" className={styles.primary}>Home</Link></li>
+          <li onClick={handleMenuClick}><Link to="/about" className={styles.secondary}>About</Link></li>
+          <li onClick={handleMenuClick}><Link to="/work" className={styles.tertiary}>Work</Link></li>
         </nav>
       ): (
-        <button className="button" onClick={handleMenuClick} aria-label="open menu">Menu</button>
+        <button className={styles.button} onClick={handleMenuClick} aria-label="open menu">Menu</button>
       )}
     </Fragment>
   )
