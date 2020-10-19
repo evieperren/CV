@@ -19,8 +19,10 @@ const HomePage = () => {
         <span className="float__right">PERREN</span>
       </h1>
       <p className="feature__header"></p>
-      <button onClick={handleLightClick}>Light</button>
-      <button onClick={handleDarkClick}>Dark</button>
+      <div className="feature__buttons">
+        <button onClick={handleLightClick}>Light</button>
+        <button onClick={handleDarkClick}>Dark</button>
+      </div>
     </div>
   )
 }

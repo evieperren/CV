@@ -1,6 +1,46 @@
 @import '../../assets/features/main.scss';
 
-.carousel{
+main.light {
+  .carousel{
+    .year_wrapper{
+      @include text-colour(light);
+      div {
+        @include background-colour(dark);
+      }
+    }
+    div.progress_bar {
+      @include border-colour(light);
+      @include text-colour(light);
+      div.bar {
+        @include background-colour(dark);
+      }
+    }
+    .number {
+      @include text-colour(light);
+    }
+  }
+}
+main.dark {
+  .carousel{
+    .year_wrapper{
+      @include text-colour(dark);
+      div {
+        @include background-colour(light);
+      }
+    }
+    div.progress_bar {
+      @include border-colour(dark);
+      @include text-colour(dark);
+      div.bar {
+        @include background-colour(light);
+      }
+    }
+    .number {
+      @include text-colour(dark);
+    }
+  }
+}
+.carousel {
   .scroll_left {
     width: 30px;
     height: 30px;
@@ -58,7 +98,6 @@
               }
               & div {
                 width: 2px;
-                background-color: #c4c4c4;
                 height: 40px;
                 margin: 0;
                 display: inline-block;
@@ -109,14 +148,12 @@
           & div.progress_bar{
             height: 2px;
             width: 65%;
-            background-color: #c4c4c4;
   
             @media only screen and (min-width: 760px) {
               width: 80%;
             }
   
             & .bar {
-              background-color: $black;
               height: 2px;
   
               &._25 {
@@ -144,7 +181,6 @@
     justify-content: flex-end;
     margin: 0;
     padding-right: 30px;
-    color: $highlight-primary;
     font-family: $font-feature;
     line-height: 3rem;
     margin-bottom: 20px;
