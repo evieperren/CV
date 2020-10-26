@@ -68,7 +68,10 @@ main.dark {
       height: 100%;
       @media only screen and (min-width: 1000px) {
         width: 500px;
-        height: 400px;
+      }
+      & h4 {
+        margin-bottom: 10px;
+        text-align: center;
       }
     
       & > li {
@@ -114,7 +117,7 @@ main.dark {
                 width: 100%;
       
                 @media only screen and (min-width: 760px) {
-                  max-width: 200px;
+                  max-width: 150px;
                 }
               }
               &.tablet {
@@ -122,7 +125,7 @@ main.dark {
                 width: 100%;
       
                 @media only screen and (min-width: 760px) {
-                  max-width: 300px;
+                  max-width: 180px;
                 }
               }
               &.laptop {
@@ -130,10 +133,10 @@ main.dark {
                 width:100%;
       
                 @media only screen and (min-width: 760px) {
-                  max-width: 400px;
+                  max-width: 200px;
                 }
                 @media only screen and (min-width: 1000px) {
-                  max-width: 500px;
+                  max-width: 400px;
                 }
               }
             }
@@ -176,6 +179,7 @@ main.dark {
   }
   .number {
     font-size: 60px;
+    line-height: 1rem;
     z-index: 5;
     display: flex;
     justify-content: flex-end;
