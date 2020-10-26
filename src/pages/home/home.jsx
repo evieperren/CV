@@ -1,48 +1,28 @@
-import React, { Fragment, useState } from 'react'
-import { HashLink as Link } from 'react-router-hash-link'
-import Menu from '../../components/menu/menu'
-import styles from './home.module.scss'
-import image1 from '../../assets/images/banksy.jpg'
-import image2 from '../../assets/images/busy-street.jpg'
-import Carousel from '../../components/carousel/carousel'
-import mountains from '../../assets/images/mountains.png.jpeg'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../context/theme-context'
+import './home.scss'
 
 const HomePage = () => {
-  const [ showFeatureImg, setShowFeatureImg] = useState(false)
+  const { setTheme } = useContext(ThemeContext)
 
-  function handleMouseOver(){
-    setShowFeatureImg(true)
+  function handleLightClick(){
+    setTheme('LIGHT')
   }
-  function handleMouseLeave(){
-    setShowFeatureImg(false)
+  function handleDarkClick(){
+    setTheme('DARK')
   }
+
   return(
-    <div>
-      <div className={styles.container}>
-        <header>
-          <Menu></Menu>
-          <Link smooth to="#work" className={styles.non_menu_link}>Works</Link>
-        </header>
-        {showFeatureImg && (
-          <img src={image2} className={styles.img__bottom}/>
-        )}
-        <h1 onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          <span className={styles.float__left}>EVIE</span>
-          <span className={styles.float__right}>PERREN</span>
-        </h1>
-        <p className={styles.feature__header}></p>
+    <div className="home container">
+      <h1>
+        <span className="float__left">EVIE</span>
+        <span className="float__right">PERREN</span>
+      </h1>
+      <p className="feature__header"></p>
+      <div className="feature__buttons">
+        <button onClick={handleLightClick}>Light</button>
+        <button onClick={handleDarkClick}>Dark</button>
       </div>
-      <div className={styles.introduction}>
-        <p>A self-taught Software Developer born and raised in England. With a focus on Front-End development, Evie is able to work individually and in a team to create a strong UI/UX written in clean code.
-        </p>
-      </div>
-      <div className={styles.work}>
-        <h2 id="work">Works</h2>
-        <Carousel></Carousel>
-      </div>
-      <footer>
-        <img src={mountains} alt="mountains" className={styles.footer}/>
-      </footer>
     </div>
   )
 }

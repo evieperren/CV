@@ -1,41 +1,59 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import AboutPage from '../pages/about/about'
 import HomePage from '../pages/home/home'
 import { MenuContext } from '../context/menu-context'
 import LoadingPage from '../pages/loading/loading'
+import Menu from '../components/menu/menu'
+import './layout.scss'
+
+import WorkPage from '../pages/work/work'
+import { ThemeContext } from '../context/theme-context'
 
 const Layout = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false)
-
   const [ isLoading, setIsLoading ] = useState(true)
+  const [ theme, setTheme] = useState('LIGHT')
 
   useEffect(() => {
     setIsLoading(true)
-    
     setTimeout(() => {
       setIsLoading(false)
     }, 2000)
 
   }, [])
+  let currentTheme = theme
+  switch(theme){
+    case 'DARK':
+      currentTheme = "dark"
+      break
+    default: 
+      currentTheme = "light"
+  }
+
+
   return(
     <Fragment>
     <Router>
-      <main>
+      <main className={currentTheme}>
           <Switch>
-              {!isLoading ? (
-                <Fragment>
-                  <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
-                    <Route exact path="/">
-                      <HomePage></HomePage>
-                    </Route>
-                    <Route path="/about">
-                      <AboutPage></AboutPage>
-                    </Route>
-                  </MenuContext.Provider>
-                </Fragment>
+            {!isLoading ? (
+              <ThemeContext.Provider value={{theme, setTheme}}>
+                <MenuContext.Provider value={{isMenuOpen, setIsMenuOpen}}>
+                    <Menu></Menu>
+                  <Route exact path="/">
+                    <HomePage></HomePage>
+                  </Route>
+                  <Route path="/about">
+                    <AboutPage></AboutPage>
+                  </Route>
+                  <Route path="/work">
+                    <WorkPage></WorkPage>
+                  </Route>
+                </MenuContext.Provider>
+              </ThemeContext.Provider>
               ):(
-                <LoadingPage></LoadingPage>
+              <LoadingPage></LoadingPage>
               )}
           </Switch>
       </main>

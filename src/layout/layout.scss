@@ -1,0 +1,10 @@
+@import '../assets/features/main.scss';
+
+main.light {
+  @include background-colour(light);
+  @include text-colour(light);
+}
+main.dark {
+  @include background-colour(dark);
+  @include text-colour(dark);
+}

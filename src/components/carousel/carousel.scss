@@ -1,0 +1,196 @@
+@import '../../assets/features/main.scss';
+
+main.light {
+  .carousel{
+    .year_wrapper{
+      @include text-colour(light);
+      div {
+        @include background-colour(dark);
+      }
+    }
+    div.progress_bar {
+      @include border-colour(light);
+      @include text-colour(light);
+      div.bar {
+        @include background-colour(dark);
+      }
+    }
+    .number {
+      @include text-colour(light);
+    }
+  }
+}
+main.dark {
+  .carousel{
+    .year_wrapper{
+      @include text-colour(dark);
+      div {
+        @include background-colour(light);
+      }
+    }
+    div.progress_bar {
+      @include border-colour(dark);
+      @include text-colour(dark);
+      div.bar {
+        @include background-colour(light);
+      }
+    }
+    .number {
+      @include text-colour(dark);
+    }
+  }
+}
+.carousel {
+  .scroll_left {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/images/angle-double-left-solid.svg');
+    display: block;
+    background-repeat: no-repeat;
+  }
+  .scroll_right {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/images/angle-double-right-solid.svg');
+    display: block;
+    background-repeat: no-repeat;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    align-items: center;
+  
+    & .slider {
+      margin: 0;
+      padding: 0;
+      width: 60%;
+      height: 100%;
+      @media only screen and (min-width: 1000px) {
+        width: 500px;
+        height: 400px;
+      }
+    
+      & > li {
+        list-style: none;
+        text-align: center;
+        
+        & .item {
+          text-decoration: none;
+          color: $black;
+          text-align: center;
+  
+          & .feature_wrapper {
+            display: flex;
+            justify-content: center;
+  
+            & .year_wrapper {
+              @media only screen and (min-width: 760px) {
+                position: absolute;
+                left: 30%; 
+              }
+  
+              & p {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                margin: 0;
+                padding-bottom: 15px;
+              }
+              & div {
+                width: 2px;
+                height: 40px;
+                margin: 0;
+                display: inline-block;
+  
+                @media only screen and (min-width: 760px) {
+                  height: 100px;
+  
+                }
+              }
+            }
+            & img {
+              &.mobile {
+                max-width: 100px;
+                width: 100%;
+      
+                @media only screen and (min-width: 760px) {
+                  max-width: 200px;
+                }
+              }
+              &.tablet {
+                max-width: 140px;
+                width: 100%;
+      
+                @media only screen and (min-width: 760px) {
+                  max-width: 300px;
+                }
+              }
+              &.laptop {
+                max-width: 250px;
+                width:100%;
+      
+                @media only screen and (min-width: 760px) {
+                  max-width: 400px;
+                }
+                @media only screen and (min-width: 1000px) {
+                  max-width: 500px;
+                }
+              }
+            }
+          }
+        }
+    
+        & div.container {
+          display: flex;
+          justify-content: space-around;
+          padding: 30px 0;
+  
+          & div.progress_bar{
+            height: 2px;
+            width: 65%;
+  
+            @media only screen and (min-width: 760px) {
+              width: 80%;
+            }
+  
+            & .bar {
+              height: 2px;
+  
+              &._25 {
+                width: 25%;
+              }
+              &._50 {
+                width: 50%;
+              }
+              &._75 {
+                width: 75%;
+              }
+              &._100 {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .number {
+    font-size: 60px;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 30px;
+    font-family: $font-feature;
+    line-height: 3rem;
+    margin-bottom: 20px;
+  
+    @media only screen and (min-width: 760px) {
+      font-size: 105px;
+    }
+    @media only screen and (min-width: 1000px) {
+      font-size: 130px;
+      padding-right: 65px;
+    }
+  }
+}
