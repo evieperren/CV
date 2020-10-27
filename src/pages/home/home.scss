@@ -11,7 +11,12 @@ main.light {
       @include border-colour(light);
     }
     &__buttons{
-      @include text-colour(light)
+      @include text-colour(light);
+      button {
+        &:hover {
+          color: red
+        }
+      }
     }
     &__right {
       @include border-colour(light);
@@ -22,7 +27,11 @@ main.dark {
   .feature {
     &__buttons{
       button {
-        @include text-colour(dark)
+        @include text-colour(dark);
+
+        &:hover {
+          color: red
+        }
       }
     }
   }
@@ -88,19 +97,20 @@ main.dark {
     position: absolute;
     bottom: 0;
 
+    &#dark {
+      position: absolute;
+      display: block;
+      right: 0;
+    }
+    &#light {
+      left: 0;
+    }
     button {
       border: none;
       background-color: transparent;
       font-size: 30px;
-
-      &#dark {
-        position: absolute;
-        display: block;
-        right: 0;
-      }
-      &#light {
-        left: 0;
-      }
+      cursor: pointer;
+    
     }
   }
   @media only screen and (min-width: 1000px) {
