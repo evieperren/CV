@@ -12,11 +12,6 @@ main.light {
     }
     &__buttons{
       @include text-colour(light);
-      button {
-        &:hover {
-          color: red
-        }
-      }
     }
     &__right {
       @include border-colour(light);
@@ -28,10 +23,6 @@ main.dark {
     &__buttons{
       button {
         @include text-colour(dark);
-
-        &:hover {
-          color: red
-        }
       }
     }
   }
@@ -96,6 +87,9 @@ main.dark {
     justify-content: space-between;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    padding: 40px 40px;
+    box-sizing: border-box;
 
     &#dark {
       position: absolute;
@@ -108,9 +102,18 @@ main.dark {
     button {
       border: none;
       background-color: transparent;
-      font-size: 30px;
+      font-size: 16px;
       cursor: pointer;
-    
+      border-bottom: 2px solid transparent;
+
+      @media only screen and (min-width: 450px) {
+        font-size: 30px;
+      }
+
+      &:hover {
+        color: $highlight-primary;
+        border-bottom: 2px solid $highlight-primary;
+      }
     }
   }
   @media only screen and (min-width: 1000px) {
