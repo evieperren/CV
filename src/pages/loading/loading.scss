@@ -1,0 +1,22 @@
+@import '../../assets/features/main.scss';
+
+.loading {
+    &__container {
+        height: 100vh;
+        text-align: center;
+
+        h3 {
+            font-family: $font-subtitle;
+            margin: auto 0;
+            padding: 100px 0 10px 0;
+        }
+        img {
+            width: 100px;
+            margin: auto 0;
+            animation: rotation 1s infinite linear;
+            @media only screen and (min-width: 768px) {
+                width: 150px;
+            }
+        }
+    }
+}

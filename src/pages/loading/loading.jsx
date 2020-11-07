@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import './loading.scss'
+import spinner from '../../assets/images/spinner .png'
 
 const LoadingPage = () => {
-  const [ loadingPercentage, setLoadingPercentage ] = useState(0)
-
-  useEffect(() => {
-    for( let i = 0; i < 100; i++){
-      setTimeout(() => {
-        setLoadingPercentage(i)
-      }, 2000)
-    }
-  })
   return (
     <main>
-      <p>loading page here</p>
-      <p>{loadingPercentage}</p>
+      <div className="loading__container">
+          <h3>Loading</h3>
+          <img src={spinner}/>
+      </div>
     </main>
   )
 }
