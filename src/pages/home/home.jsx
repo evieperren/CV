@@ -20,8 +20,12 @@ const HomePage = () => {
       </h1>
       <p className="feature__header"></p>
       <div className="feature__buttons">
-        <button onClick={handleLightClick}>Light</button>
-        <button onClick={handleDarkClick}>Dark</button>
+        <div id="light">
+          <button onClick={handleLightClick}>Light</button>
+        </div>
+        <div id="dark">
+          <button onClick={handleDarkClick}>Dark</button>
+        </div>
       </div>
     </div>
   )

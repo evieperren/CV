@@ -10,11 +10,18 @@ body {
 h1 {
   font-family: $font-title;
   font-weight: bolder;
-  font-size: 80px;
+  font-size: 65px;
+  @media only screen and (min-width: 450px) {
+    font-size: 120px; 
+  }
   @media only screen and (min-width: 760px) {
-    font-size: 140px; 
+    font-size: 170px; 
   }
   @media only screen and (min-width: 1000px) {
+    font-size: 200px; 
+    margin:0 0 0 0;
+  }
+  @media only screen and (min-width: 1200px) {
     font-size: 300px; 
     margin:0 0 0 0;
   }

@@ -48,12 +48,23 @@ main.dark {
     list-style: none;
     text-align: center;
     padding: 10px;
+    line-height: 4rem;
+    
+    @media only screen and (min-width: 768px) {
+      line-height: 5rem;
+    }
+    @media only screen and (min-width: 1000px) {
+      line-height: 9rem;
+    }
 
     a {
       text-decoration: none;
       font-family: $font-feature;
       font-size: 55px;
 
+      @media only screen and (min-width: 768px) {
+        font-size: 80px;
+      }
       @media only screen and (min-width: 1000px) {
         font-size: 180px;
       }
@@ -77,16 +88,22 @@ main.dark {
   }
 }
 .button {
-  
   border: none;
   outline: none;
-  padding: 30px;
+  margin: 30px;
+  font-size: 16px;
 
+  @media only screen and (min-width: 450px) {
+    font-size: 30px;
+  }
+  border-bottom: 2px solid transparent;
   & .icon {
     width: 30px;
     @include header-text-transition;
   }
   &:hover{
     cursor: grab;
+    color: $highlight-primary;
+    border-bottom: 2px solid $highlight-primary;
   }
 }
