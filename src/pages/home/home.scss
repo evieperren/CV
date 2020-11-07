@@ -1,0 +1,143 @@
+@import '../../assets/features/main.scss';
+
+
+main.light {
+  & a.non_menu_link {
+    @include text-colour(light);
+  }
+
+  .feature {
+    &__header {
+      @include border-colour(light);
+    }
+    &__buttons{
+      @include text-colour(light);
+    }
+    &__right {
+      @include border-colour(light);
+    }
+  }
+}
+main.dark {
+  .feature {
+    &__buttons{
+      button {
+        @include text-colour(dark);
+      }
+    }
+  }
+}
+.home.container {
+  padding-bottom: 20px;
+  height: 89vh;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 1000px) {
+      align-items: center;
+    }
+    & a.non_menu_link {
+      text-decoration: none;
+      padding: 30px;
+    }
+  }
+
+  h1 { 
+    position: relative;
+    z-index: 10;
+    margin:0 0 0 0;
+    padding-left: 30px;
+
+    @media only screen and (min-width: 1000px) {
+      text-align: left;
+      line-height: 16rem;
+    }
+  }
+}
+.float {
+  &__left {
+    display: block;
+  }
+  &__right {
+    display: block;
+  }
+  @media screen and (min-width: 1000px){
+    &__left {
+      padding-left: 150px;
+    }
+    &__right {
+      padding-right: 150px;
+      text-align: end;
+    }
+  }
+
+}
+.feature {
+  &__header {
+    display: none;
+  }
+  &__right {
+    display: none;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 40px;
+    box-sizing: border-box;
+
+    &#dark {
+      position: absolute;
+      display: block;
+      right: 0;
+    }
+    &#light {
+      left: 0;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 16px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+
+      @media only screen and (min-width: 450px) {
+        font-size: 30px;
+      }
+
+      &:hover {
+        color: $highlight-primary;
+        border-bottom: 2px solid $highlight-primary;
+      }
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    &__header {
+      height: 165px;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 1px;
+      position: absolute;
+      left: -178px;
+      width: 1000px;
+      top: 300px;
+      display: block;
+    }
+    &__right {
+      display: block;
+      height: 165px;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 50%;
+      width: 1000px;
+      top: 300px;
+      right: -450px;
+      position: absolute;
+    }
+  }
+}

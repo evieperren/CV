@@ -1,0 +1,20 @@
+@import '../../assets/features/main.scss';
+
+.work {
+  position: relative;
+  padding-bottom: 80px;
+  & h2 {
+    margin: 10px;
+    padding: 0;
+    line-height: 1em;
+    font-family: $font-feature;
+    @media only screen and (min-width: 760px){
+      text-align: left !important;
+      text-indent: 10%;
+    }
+    @media only screen and (min-width: 1000px) {
+      clear: both;
+      line-height: 9rem;
+    }
+  }
+}

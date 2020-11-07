@@ -1,0 +1,109 @@
+@import '../../assets/features/main.scss';
+
+// THEMING
+main.light {
+  .menu {
+    @include background-colour(light);
+    li {
+      a {
+        @include text-colour(light);
+        &:hover {
+          @include border-colour(light);
+        }
+      }
+    }
+  }
+  .button {
+    @include background-colour(light);
+    @include text-colour(light);
+  }
+}
+main.dark {
+  .menu {
+    @include background-colour(dark);
+    li {
+      a {
+        @include text-colour(dark);
+        &:hover {
+          @include border-colour(dark);
+        }
+      }
+    }
+  }
+  .button {
+    @include background-colour(dark);
+    @include text-colour(dark);
+  }
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  opacity: 0.98;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+
+  li {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    line-height: 4rem;
+    
+    @media only screen and (min-width: 768px) {
+      line-height: 5rem;
+    }
+    @media only screen and (min-width: 1000px) {
+      line-height: 9rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: $font-feature;
+      font-size: 55px;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 80px;
+      }
+      @media only screen and (min-width: 1000px) {
+        font-size: 180px;
+      }
+      
+      &:hover {
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+
+        &.primary {
+          color: $highlight-primary !important;
+        }
+        &.secondary {
+          color: $highlight-secondary !important;
+        }
+        &.tertiary {
+          color: $highlight-tertiary !important;
+        }
+      }
+    }
+  }
+}
+.button {
+  border: none;
+  outline: none;
+  margin: 30px;
+  font-size: 16px;
+
+  @media only screen and (min-width: 450px) {
+    font-size: 30px;
+  }
+  border-bottom: 2px solid transparent;
+  & .icon {
+    width: 30px;
+    @include header-text-transition;
+  }
+  &:hover{
+    cursor: grab;
+    color: $highlight-primary;
+    border-bottom: 2px solid $highlight-primary;
+  }
+}

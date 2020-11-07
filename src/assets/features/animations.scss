@@ -1,0 +1,41 @@
+@keyframes background-colour-transition {
+  0% {
+    background-color: $white;
+  }
+  20% {
+    background-color: $highlight-tertiary;
+  }
+  30% {
+    background-color: #4b4b4b;
+  }
+  40% {
+    background-color: #2b2b2b;
+  }
+  50% {
+    background-color: $black;
+  }
+  60% {
+    background-color: #2b2b2b;
+  }
+  70% {
+    background-color: #4b4b4b;
+  } 
+  80% {
+    background-color: $highlight-tertiary;
+  }
+  100% {
+   background-color: $white;
+  }
+ }
+
+ @keyframes header-text-transition {
+  0% {
+    color: $black;
+  }
+  50% {
+    color: #DBDBDB;
+  }
+  100% {
+    color: $black;
+  }
+ }
