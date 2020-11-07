@@ -1,6 +1,5 @@
 @import '../../assets/features/main.scss';
 
-
 main.light {
   & a.non_menu_link {
     @include text-colour(light);
