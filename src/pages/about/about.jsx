@@ -46,8 +46,10 @@ const AboutPage = () => {
           <div>
             <h3>Accreditations</h3>
             <ul>
-              <li>Level 4 Software Developer Diploma</li>
-              <li>Udemy Courses</li>
+              <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:6720022130324586496/">Level 4 Software Developer Diploma</a></li>
+              <li>Udemy Courses (Typescript, JavaScript Fundamentals, React.js)</li>
+              <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:6603212406623731712/">Microsoft: Programming with HTML5, with JavaScript and CSS</a></li>
+              <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:6603212853421969408/">Microsoft: Database Fundamentals</a></li>
             </ul>
             </div>
             <div>
@@ -61,7 +63,7 @@ const AboutPage = () => {
             <div className="credits">
               <h3>Credits</h3>
               <p>Design & Development</p>
-              <Link to="/">Evie Perren</Link>
+              <Link to="https://www.linkedin.com/in/evie-butland-432a33170/">Evie Perren</Link>
             </div>
           </div>
       </main>

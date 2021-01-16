@@ -5,7 +5,7 @@ import './work.scss'
 const WorkPage = () => {
   return (
     <main className="work">
-      <h2>Works</h2>
+      <h1 class="heading">Works</h1>
       <Carousel></Carousel>
     </main>
   )

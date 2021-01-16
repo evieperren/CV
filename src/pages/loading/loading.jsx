@@ -7,7 +7,7 @@ const LoadingPage = () => {
     <main>
       <div className="loading__container">
           <h3>Loading</h3>
-          <img src={spinner}/>
+          <img src={spinner} alt=""/>
       </div>
     </main>
   )

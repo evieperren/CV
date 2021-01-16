@@ -44,7 +44,7 @@ h3 {
     font-size: 50px;
   }
 }
-h4 {
+h4, h3.heading {
   font-family: $font-title;
 
   @media only screen and (min-width: 1000px) {

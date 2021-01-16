@@ -1,44 +1,53 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import './carousel.scss'
 import hr_project_laptop from '../../assets/images/hr-desktop.png'
 import self_serve_tablet from '../../assets/images/self-serve.png'
 import pet_checkout_mobile from '../../assets/images/pets-checkout-mobile.png'
 import pet_link_laptop from '../../assets/images/pets-link-generator.png'
+import orange_laptop from '../../assets/images/orange.png'
+import cs from 'classnames'
 
 const Carousel = () => {
   const [ activeIndex, setActiveIndex ] = useState(0)
+  // const [ progressStatus, setProgressStatus] = useState(0) /*TODO: make progress status dynamic */
 
   const slides = [
     {
       title: 'HR Mentor Project',
       image: hr_project_laptop,
       class: "laptop",
-      progress: "_25", 
+      progress: `_20`, 
       year: '2020'
     },
     {
       title: 'Pet Checkout',
       image: pet_checkout_mobile,
       class: "mobile",
-      progress: "_50",
+      progress: `_40`,
       year: '2019'
     },
     {
       title: 'Link Generator',
       image: pet_link_laptop,
       class: "laptop",
-      progress: "_75",
+      progress: `_60`,
       year: '2019'
     },
     {
       title: 'Self Service Redesign',
       image: self_serve_tablet,
       class: "tablet",
-      progress: "_100",
+      progress: `_80`,
       year: '2019'
+    },
+    {
+      title: 'Orange Driver Training Redesign',
+      image: orange_laptop,
+      class: "laptop",
+      progress: `_100`,
+      year: '2021'
     }
   ]
-
   function goToPreviousSlide(){
     if(activeIndex === 0){
       setActiveIndex(slides.length - 1)
@@ -59,22 +68,22 @@ const Carousel = () => {
   }
   return (
     <div className="carousel">
-      <h3 className="number">0{activeIndex + 1}</h3>
+      <h2 className="number">0{activeIndex + 1}</h2>
       <div className="container">
         <span className="scroll_left" aria-label="scroll left" onClick={goToPreviousSlide}></span>
         <ul className="slider">
           {slides.map((item, key) => 
             {return (
-              <Fragment>
+              <>
                 {checkActiveIndex(key) && (
-                  <Fragment>
-                  <h4>{item.title}</h4>
+                  <>
+                  <h3 class="heading">{item.title}</h3>
                   <li key={activeIndex}>
                     <a href="/" className="item">
                       <div className="feature_wrapper">
                         <div className="year_wrapper">
                           <p>{item.year}</p>
-                          <div></div>
+                          <span></span>
                         </div>
                         <img src={item.image} alt={item.title} className={item.class}/>
                       </div>
@@ -82,14 +91,14 @@ const Carousel = () => {
                     <div className="container">
                       <div>0{activeIndex + 1}</div>
                         <div className="progress_bar">
-                          <div className={item.progress, "bar"}></div>
+                          <div className={cs(item.progress, "bar")}></div>
                         </div>
                       <div>0{slides.length}</div>
                     </div>
                   </li>
-                  </Fragment>
+                  </>
                   )}
-              </Fragment>
+              </>
             )
           })}
           </ul>

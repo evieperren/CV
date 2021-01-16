@@ -4,7 +4,7 @@ main.light {
   .carousel{
     .year_wrapper{
       @include text-colour(light);
-      div {
+      span {
         @include background-colour(dark);
       }
     }
@@ -24,13 +24,15 @@ main.dark {
   .carousel{
     .year_wrapper{
       @include text-colour(dark);
-      div {
+      span {
         @include background-colour(light);
       }
     }
     div.progress_bar {
       @include border-colour(dark);
       @include text-colour(dark);
+      @include background-colour(light);
+
       div.bar {
         @include background-colour(light);
       }
@@ -102,7 +104,7 @@ main.dark {
                 margin: 0;
                 padding-bottom: 15px;
               }
-              & div {
+              & span {
                 width: 2px;
                 height: 40px;
                 margin: 0;
@@ -162,14 +164,17 @@ main.dark {
             & .bar {
               height: 2px;
   
-              &._25 {
-                width: 25%;
+              &._20 {
+                width: 20%;
               }
-              &._50 {
-                width: 50%;
+              &._40 {
+                width: 40%;
               }
-              &._75 {
-                width: 75%;
+              &._60 {
+                width: 60%;
+              }
+              &._80 {
+                width: 80%;
               }
               &._100 {
                 width: 100%;
